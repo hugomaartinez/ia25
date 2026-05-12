@@ -136,34 +136,32 @@ REAL
   - **Error Tipo II - MÁS GRAVE:** Perdiste la oportunidad de tratamiento
   - El modelo fue demasiado relajista → PELIGROSO
 
-**Otros ejemplos para entender:**
+**Derivadas (Métricas calculadas):**
 
-*Ejemplo 1: Detector de Spam*
-- **TP:** Email SPAM predicho SPAM ✓
-- **TN:** Email LEGÍTIMO predicho LEGÍTIMO ✓
-- **FP:** Email LEGÍTIMO predicho SPAM (pierdes emails importantes) ❌ MÁS GRAVE
-- **FN:** Email SPAM predicho LEGÍTIMO (ves basura) ❌ Molesto pero menos grave
-
-*Ejemplo 2: Detección de Fraude*
-- **TP:** Transacción FRAUDE detectada ✓
-- **TN:** Transacción LEGÍTIMA permitida ✓
-- **FP:** Transacción LEGÍTIMA bloqueada (cliente enojado) ❌ Caro en experiencia
-- **FN:** Transacción FRAUDE pasó (pérdida dinero) ❌❌ MÁS GRAVE
-
-**Cuál error es "más grave" DEPENDE del contexto:**
-- **Medicina:** FN es peor (pierdes tratamiento)
-- **Spam:** FP es peor (pierdes emails legítimos)
-- **Fraude:** FN es peor (pierdes dinero)
-
-**Derivadas:**
 ```
-Accuracy  = (TP+TN)/Total        → % Correcto (engañoso con desbalance)
-Precision = TP/(TP+FP)           → "Confianza de predicción +"
-Recall    = TP/(TP+FN)           → "Detección de todos los +"
-F1        = 2×P×R/(P+R)          → Balance P y R
-Specificity = TN/(TN+FP)         → % TN detectados
-Sensitivity = Recall             → Mismo que Recall
+Accuracy  = (TP+TN) / Total      → % Correcto GLOBAL (solo si clases balanceadas)
+Precision = TP / (TP+FP)         → De lo que predije "+", ¿cuánto acerté realmente?
+Recall    = TP / (TP+FN)         → De TODO lo que ES "+", ¿cuánto encontré?
+F1        = 2×P×R / (P+R)        → Balance armónico de Precision y Recall
+Specificity = TN / (TN+FP)       → De lo que ES "-", ¿cuánto rechacé correctamente?
+Sensitivity = Recall             → Alias de Recall
 ```
+
+**¿Qué mide cada una?**
+
+| Métrica | Pregunta | Cuándo usarla |
+|---------|----------|---|
+| **Accuracy** | ¿Acerté en total? | Solo si clases bien balanceadas. CON desbalance es engañosa |
+| **Precision** | Si digo "+", ¿de verdad lo es? | Cuando queremos EVITAR FALSOS POSITIVOS (Spam, Fraude) |
+| **Recall** | ¿Encontré TODOS los casos "+"? | Cuando es CRÍTICO no perder ninguno (Medicina, Seguridad) |
+| **F1** | ¿Balance Precision-Recall? | Cuando ambos importan igual (sin contexto específico) |
+| **Specificity** | ¿Rechacé bien los "-"? | Raramente usada; Recall casi siempre es más importante |
+
+**Regla de oro:**
+- **Recall HIGH** → Minimiza FN (casos perdidos) → Medicina, detección crítica
+- **Precision HIGH** → Minimiza FP (falsas alarmas) → Spam, bloqueos
+- **F1** → Sin contexto claro, balance requerido
+- **Accuracy** → SOLO si clases están equilibradas; con desbalance usa **AUC-ROC**
 
 **Cuándo usar cada una:**
 - **Precision Alto:** Spam (evitar falsos +), Fraude
