@@ -75,12 +75,20 @@
 - Lasso (L1): Reduce algunos coefficients a 0 (feature selection)
 
 **Métricas Regresión:**
-```
-MSE  = Σ(y-ŷ)²/n        → Penaliza grandes errores
-RMSE = √MSE             → Misma unidad que y
-MAE  = Σ|y-ŷ|/n        → Robusto a outliers
-R²   = 1-(SS_res/SS_tot)→ % varianza explicada [0,1]
-```
+
+| Métrica | Fórmula | Qué mide | Cuándo usarla |
+|---------|---------|----------|---|
+| **MSE** | Σ(y-ŷ)²/n | Error promedio (penaliza errores grandes) | Estándar, pero sensible a outliers |
+| **RMSE** | √MSE | Raíz de MSE (en misma unidad que y) | Interpretable (mismo rango que predicciones) |
+| **MAE** | Σ\|y-ŷ\|/n | Error promedio (lineal) | Robusto a outliers, más realista que MSE |
+| **R²** | 1-(SS_res/SS_tot) | % varianza explicada [0,1] | Evaluación global (qué tan bien predice) |
+
+**Diferencias clave:**
+- **MSE vs MAE:** MSE penaliza errores grandes más (x²), MAE los trata igual
+  - Con outliers → MAE es mejor
+  - Sin outliers → MSE es estándar
+- **RMSE vs MSE:** RMSE en mismas unidades que y (más interpretable)
+- **R²:** Mide qué porcentaje de varianza explica el modelo (0 = nada, 1 = perfecto)
 
 #### **CLASIFICACIÓN**
 
@@ -235,25 +243,56 @@ Rango: -1 a +1
 #### **Funciones de Activación**
 
 ```
-ReLU(x)     = max(0, x)           → Estándar en capas ocultas
-Sigmoid(x)  = 1/(1+e^-x)          → Output [0,1], probabilidades
-Tanh(x)     = (e^x-e^-x)/(e^x+e^-x) → Output [-1,1]
-Softmax     = e^xi / Σe^xj        → Multi-clase, probabilities
+ReLU(x)     = max(0, x)
+Sigmoid(x)  = 1/(1+e^-x)
+Tanh(x)     = (e^x-e^-x)/(e^x+e^-x)
+Softmax     = e^xi / Σe^xj
 ```
 
+**Idea simple:** una activación decide cómo se transforma la suma de entrada de una neurona antes de pasar a la siguiente capa.
+
+**Intuición de cada una:**
+- **ReLU:** deja pasar los valores positivos y bloquea los negativos. Es como un filtro que dice: "si no aporta, lo apago".
+- **Sigmoid:** comprime cualquier número entre 0 y 1. Se interpreta fácil como probabilidad.
+- **Tanh:** comprime entre -1 y 1. Se parece a sigmoid, pero centrada en 0, así que puede dar valores positivos y negativos.
+- **Softmax:** convierte varias salidas en probabilidades que suman 1. Sirve cuando solo puede haber una clase correcta.
+
 **Cuándo usar:**
-- Hidden layers: ReLU (estándar)
-- Binary classification output: Sigmoid
-- Multi-class output: Softmax
-- Regression output: Lineal (sin activación)
+- **Hidden layers:** ReLU, porque suele entrenar mejor y es la opción estándar.
+- **Binary classification output:** Sigmoid, porque devuelve una probabilidad de la clase positiva.
+- **Multi-class output:** Softmax, porque reparte la probabilidad entre todas las clases.
+- **Regression output:** salida lineal, sin activación, porque queremos cualquier valor real.
+
+**Regla rápida para memorizar:**
+- ReLU = "dejo pasar lo positivo"
+- Sigmoid = "lo convierto en probabilidad de 0 a 1"
+- Tanh = "como sigmoid, pero de -1 a 1"
+- Softmax = "elijo una clase entre varias"
 
 #### **Loss Functions**
 
 ```
-Cross-Entropy = -Σ y·log(ŷ)    → Clasificación
-MSE          = Σ(y-ŷ)²/n      → Regresión
-Binary Cross-Entropy = -(y·log(ŷ) + (1-y)·log(1-ŷ)) → Binary
+Cross-Entropy = -Σ y·log(ŷ)
+MSE          = Σ(y-ŷ)²/n
+Binary Cross-Entropy = -(y·log(ŷ) + (1-y)·log(1-ŷ))
 ```
+
+**Idea simple:** una loss mide cuán mal lo está haciendo el modelo. Cuanto más pequeña, mejor.
+
+**Intuición de cada una:**
+- **MSE:** compara valor real y valor predicho y castiga mucho los errores grandes. Se usa en regresión porque el objetivo es predecir un número.
+- **Cross-Entropy:** mide si el modelo le dio mucha probabilidad a la clase correcta. Se usa en clasificación porque no queremos solo acertar la clase, sino asignarle alta confianza.
+- **Binary Cross-Entropy:** es la versión de cross-entropy para dos clases. Se usa cuando la salida es 0/1 o negativo/positivo.
+
+**Cuándo usar:**
+- **Regresión:** MSE.
+- **Clasificación binaria:** Binary Cross-Entropy.
+- **Clasificación multiclase:** Cross-Entropy.
+
+**Regla rápida para memorizar:**
+- Si predigo un número → **MSE**
+- Si predigo sí/no → **Binary Cross-Entropy**
+- Si predigo una clase entre varias → **Cross-Entropy**
 
 ---
 
