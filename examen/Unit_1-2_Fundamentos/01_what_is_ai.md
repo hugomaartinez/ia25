@@ -33,7 +33,7 @@ This revolution shifted the dominant paradigm from rule-based systems to **machi
 
 While often used interchangeably, **Machine Learning (ML)** is a subfield of AI that is easier to define. It focuses on building systems that can **learn from data**, identify patterns, and make decisions with minimal human intervention.
 
-<img src="img/ai_hierarchy.png" width="200" style="margin: 20px;">
+<img src="../img/ai_hierarchy.png" width="200" style="margin: 20px;">
 
 Instead of being explicitly programmed with rules to solve a problem, a machine learning model learns its own algorithm by analyzing and finding patterns in data. The more data it is exposed to, the better the model becomes.
 

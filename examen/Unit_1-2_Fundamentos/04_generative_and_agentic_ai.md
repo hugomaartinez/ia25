@@ -114,7 +114,7 @@ Design tips:
 
 Illustration (provided):
 
-![MCP overview](./img/mcp.gif)
+![MCP overview](../img/mcp.gif)
 
 ### AI Gateways
 

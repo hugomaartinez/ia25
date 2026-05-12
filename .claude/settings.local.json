@@ -12,7 +12,13 @@
       "Bash(rm -rf examen/Unit_* examen/Utilidades/)",
       "Bash(cp background/*.md examen/Unit_1-2_Fundamentos/)",
       "Bash(cp pytorch/01-deep-learning-fundamentals/*.ipynb examen/Unit_6_DeepLearning/)",
-      "Bash(cp pytorch/01-deep-learning-fundamentals/complementary/*.ipynb examen/Unit_6_DeepLearning/)"
+      "Bash(cp pytorch/01-deep-learning-fundamentals/complementary/*.ipynb examen/Unit_6_DeepLearning/)",
+      "Bash(cp -r background/img/* examen/img/)",
+      "Bash(cp -r qlearning/img/* examen/img/)",
+      "Bash(cp -r algorithms/img/* examen/img/)",
+      "Bash(cp -r numpy/img/* examen/img/)",
+      "Bash(cp -r sklearn/img/* examen/img/)",
+      "Bash(python3)"
     ]
   }
 }

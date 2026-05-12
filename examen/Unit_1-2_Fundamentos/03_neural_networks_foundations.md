@@ -44,7 +44,7 @@ The perceptron is the fundamental unit of a neural network, inspired by the basi
 
 ### Structure of the Perceptron
 
-[![Perceptron](./img/perceptron.png)](https://aiml.com/what-is-a-perceptron/)
+[![Perceptron](../img/perceptron.png)](https://aiml.com/what-is-a-perceptron/)
 
 A perceptron takes several binary inputs and produces a single binary output. It works by weighing the importance of each input and, if the sum of the weighted inputs surpasses a certain threshold, it "fires" (outputs a 1). Otherwise, it doesn't (outputs a 0).
 
@@ -73,7 +73,7 @@ A multilayer neural network contains:
 3.  **Output layer**: Produces the final result (e.g., a classification or a regression value).
 
 
-![MLP](./img/mlp.gif)
+![MLP](../img/mlp.gif)
 
 ### Why do we need hidden layers?
 
@@ -132,7 +132,7 @@ The mathematical foundation of backpropagation is the **chain rule** from calcul
 
 *Deep learning* refers to neural networks with many hidden layers (hence "deep"). These deep architectures allow the models to learn representations of data at various levels of abstraction.
 
-![Deep Learning](./img/deep_learning.jpg)
+![Deep Learning](../img/deep_learning.jpg)
 
 ### Advantages of Deep Learning
 

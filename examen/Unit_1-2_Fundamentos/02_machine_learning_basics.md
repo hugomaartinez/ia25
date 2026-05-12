@@ -8,17 +8,17 @@ A **model** is an abstract, articulated description of a reality. In machine lea
 
 The way a model learns is defined by its learning paradigm, which is classified based on the type of supervision or feedback it receives during training.
 
-![ML paradigms](./img/ml_paradigms.jpg)
+![ML paradigms](../img/ml_paradigms.jpg)
 
 > [What is Supervised and Unsupervised Learning? | DotCSV](https://www.youtube.com/watch?v=oT3arRRB2Cw)
 
-<img src="img/tipos-ml-clasico.jpg" width="400">
+<img src="../img/tipos-ml-clasico.jpg" width="400">
 
 ## Supervised Learning
 
 In supervised learning, the training dataset is **labeled with the correct answer**. The learning algorithm receives a set of training data and, knowing the correct answer for each example, infers a model that generates that answer.
 
-<img src="img/reglas_vs_ml.jpg" width="500">
+<img src="../img/reglas_vs_ml.jpg" width="500">
 
 ### Classification
 
@@ -41,7 +41,7 @@ In unsupervised learning, the training dataset is **not labeled**. The goal is t
 
 [![](img/classification_vs_clustering.jpeg)](https://www.linkedin.com/pulse/supervised-vs-unsupervised-learning-whats-difference-smriti-saini)
 
-[<img src="img/classificatio_vs_clustering2.png" width="500">](https://www.researchgate.net/figure/Supervised-and-unsupervised-machine-learning-a-Schematic-representation-of-an_fig3_351953193)
+[<img src="../img/classificatio_vs_clustering2.png" width="500">](https://www.researchgate.net/figure/Supervised-and-unsupervised-machine-learning-a-Schematic-representation-of-an_fig3_351953193)
 
 ### Clustering
 
