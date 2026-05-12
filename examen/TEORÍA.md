@@ -117,11 +117,43 @@ REAL
        - FP      TN      (Real -)
 ```
 
-**Memorizar:**
-- **TP:** Predicción SÍ, Real SÍ ✓
-- **TN:** Predicción NO, Real NO ✓
-- **FP:** Predicción SÍ, Real NO (Error Tipo I)
-- **FN:** Predicción NO, Real SÍ (Error Tipo II - MÁS GRAVE)
+**Memorizar (con ejemplos médicos):**
+- **TP (True Positive):** Predicción SÍ, Real SÍ ✓
+  - Modelo dice: "TIENES CÁNCER" → Realmente TIENES CÁNCER ✓
+  - Acertó correctamente en caso positivo
+  
+- **TN (True Negative):** Predicción NO, Real NO ✓
+  - Modelo dice: "NO tienes cáncer" → Realmente NO tienes ✓
+  - Acertó correctamente en caso negativo
+  
+- **FP (False Positive):** Predicción SÍ, Real NO ❌
+  - Modelo dice: "TIENES CÁNCER" → NO tienes cáncer ❌
+  - **Error Tipo I:** Alarma falsa, susto innecesario
+  - El modelo fue demasiado alarmista
+  
+- **FN (False Negative):** Predicción NO, Real SÍ ❌❌
+  - Modelo dice: "NO tienes cáncer" → SÍ tienes cáncer ❌❌
+  - **Error Tipo II - MÁS GRAVE:** Perdiste la oportunidad de tratamiento
+  - El modelo fue demasiado relajista → PELIGROSO
+
+**Otros ejemplos para entender:**
+
+*Ejemplo 1: Detector de Spam*
+- **TP:** Email SPAM predicho SPAM ✓
+- **TN:** Email LEGÍTIMO predicho LEGÍTIMO ✓
+- **FP:** Email LEGÍTIMO predicho SPAM (pierdes emails importantes) ❌ MÁS GRAVE
+- **FN:** Email SPAM predicho LEGÍTIMO (ves basura) ❌ Molesto pero menos grave
+
+*Ejemplo 2: Detección de Fraude*
+- **TP:** Transacción FRAUDE detectada ✓
+- **TN:** Transacción LEGÍTIMA permitida ✓
+- **FP:** Transacción LEGÍTIMA bloqueada (cliente enojado) ❌ Caro en experiencia
+- **FN:** Transacción FRAUDE pasó (pérdida dinero) ❌❌ MÁS GRAVE
+
+**Cuál error es "más grave" DEPENDE del contexto:**
+- **Medicina:** FN es peor (pierdes tratamiento)
+- **Spam:** FP es peor (pierdes emails legítimos)
+- **Fraude:** FN es peor (pierdes dinero)
 
 **Derivadas:**
 ```
