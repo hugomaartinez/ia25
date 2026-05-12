@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(rm -rf .git && echo \"✅ Git eliminado\" && echo && ls -la | grep \"^d\" && echo && echo \"📂 Tu carpeta 'examen/' está lista para subir\")",
+      "Bash(rm -rf .git && echo \"✅ Git eliminado\" && echo \"La carpeta está limpia para que configures tu repositorio\")"
+    ]
+  }
+}
