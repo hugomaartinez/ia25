@@ -14,7 +14,6 @@ ia25/
 ├── TEORÍA.md          ← Todo conceptos, preguntas, fórmulas
 ├── PRÁCTICA.md        ← Todo código, workflows, ejercicios
 ├── ÍNDICE.md          ← Este archivo (navegación)
-└── [otros archivos anteriores - OPCIONAL]
 ```
 
 ---
