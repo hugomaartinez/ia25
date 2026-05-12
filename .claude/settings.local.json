@@ -4,7 +4,15 @@
       "Bash(cat)",
       "Read(//tmp/**)",
       "Bash(rm -rf .git && echo \"✅ Git eliminado\" && echo && ls -la | grep \"^d\" && echo && echo \"📂 Tu carpeta 'examen/' está lista para subir\")",
-      "Bash(rm -rf .git && echo \"✅ Git eliminado\" && echo \"La carpeta está limpia para que configures tu repositorio\")"
+      "Bash(rm -rf .git && echo \"✅ Git eliminado\" && echo \"La carpeta está limpia para que configures tu repositorio\")",
+      "Bash(cp numpy/*.ipynb examen/Utilidades/)",
+      "Bash(cp pandas/*.ipynb examen/Utilidades/)",
+      "Bash(cp qlearning/*.ipynb examen/Unit_3_Paradigmas/)",
+      "Bash(cp pytorch/*.ipynb examen/Unit_6_DeepLearning/)",
+      "Bash(rm -rf examen/Unit_* examen/Utilidades/)",
+      "Bash(cp background/*.md examen/Unit_1-2_Fundamentos/)",
+      "Bash(cp pytorch/01-deep-learning-fundamentals/*.ipynb examen/Unit_6_DeepLearning/)",
+      "Bash(cp pytorch/01-deep-learning-fundamentals/complementary/*.ipynb examen/Unit_6_DeepLearning/)"
     ]
   }
 }
