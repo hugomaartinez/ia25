@@ -1,0 +1,2130 @@
+[
+  {
+    "num": 95,
+    "status": "new",
+    "question": "¿Cuál es el principal problema del gradiente que dificulta el entrenamiento de redes neuronales muy profundas?",
+    "options": [
+      {
+        "text": "a. El gradiente explota siempre en la última capa, haciendo divergir el modelo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El gradiente se desvanece (vanishing gradient): las capas iniciales reciben gradientes casi cero y aprenden muy lento",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El gradiente se vuelve negativo en capas con ReLU, bloqueando el aprendizaje",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El gradiente converge demasiado rápido antes de que el modelo generalice",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El vanishing gradient ocurre porque al aplicar la regla de la cadena capa a capa, los gradientes se multiplican por valores pequeños. Soluciones: ReLU, LSTM, skip connections (ResNet), Batch Normalization.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 96,
+    "status": "new",
+    "question": "¿Qué ocurre exactamente en la fase de Backpropagation durante el entrenamiento de una red neuronal?",
+    "options": [
+      {
+        "text": "a. Se evalúa el modelo sobre el conjunto de validación para medir su rendimiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Se calculan los gradientes de la función de pérdida respecto a cada parámetro usando la regla de la cadena, propagando el error desde la salida hacia la entrada",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Se actualizan los pesos del modelo sumando directamente el error de cada muestra",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Se aplica la función de activación a cada neurona para calcular la salida de la red",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Backpropagation usa la regla de la cadena para computar dL/dw para cada peso. Forward pass: calcula predicciones y pérdida. Backward pass: propaga gradientes de output a input. Los gradientes indican cuánto y en qué dirección cambiar cada peso.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 97,
+    "status": "new",
+    "question": "¿Por qué ReLU es la función de activación más usada en capas ocultas de redes neuronales profundas?",
+    "options": [
+      {
+        "text": "a. Porque produce outputs entre 0 y 1, lo que facilita la interpretación como probabilidad",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Porque su gradiente es 1 para entradas positivas, mitigando el vanishing gradient, y es computacionalmente muy eficiente",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Porque garantiza que la red converja al mínimo global de la función de pérdida",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Porque normaliza automáticamente las activaciones entre -1 y 1 en cada capa",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "ReLU(x)=max(0,x). Para x>0 su derivada es exactamente 1, lo que alivia el vanishing gradient. Además es O(1) en cómputo. Desventaja: neuronas muertas cuando x<0 siempre. Variantes: Leaky ReLU, ELU.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 98,
+    "status": "new",
+    "question": "¿Cuál es la diferencia clave entre el optimizador SGD y Adam?",
+    "options": [
+      {
+        "text": "a. SGD usa todos los datos para cada actualización; Adam usa mini-batches",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Adam adapta el learning rate para cada parámetro individualmente usando momentos de primer y segundo orden, mientras SGD usa el mismo learning rate para todos",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. SGD siempre converge más rápido que Adam en tareas de visión por computador",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Adam no necesita definir un learning rate inicial mientras que SGD sí",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Adam mantiene medias móviles del gradiente (m) y del gradiente al cuadrado (v), adaptando el lr por parámetro. Converge más rápido que SGD en la mayoría de casos y es el default recomendado.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 99,
+    "status": "new",
+    "question": "¿Qué hace Dropout durante el entrenamiento de una red neuronal y por qué mejora la generalización?",
+    "options": [
+      {
+        "text": "a. Elimina las neuronas con pesos más pequeños para reducir el tamaño del modelo permanentemente",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Desactiva aleatoriamente un porcentaje de neuronas en cada paso, forzando a la red a no depender de ninguna neurona específica y reduciendo la co-adaptación",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Reduce el learning rate a la mitad cada vez que detecta overfitting en el conjunto de validación",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Añade ruido gaussiano a los pesos durante backpropagation para explorar el espacio de soluciones",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Dropout apaga neuronas con probabilidad p en cada forward pass durante training. Actúa como ensemble implícito de muchas sub-redes. En inferencia se desactiva y los pesos se escalan. Típicamente p=0.2-0.5.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 100,
+    "status": "new",
+    "question": "Para una tarea de clasificación multiclase con 10 clases, ¿qué combinación de activación en la capa de salida y función de pérdida es la correcta?",
+    "options": [
+      {
+        "text": "a. Sigmoid + Binary Cross-Entropy",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. ReLU + MSE",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Softmax + Cross-Entropy (Categorical Cross-Entropy)",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Tanh + MAE",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Softmax convierte los logits en probabilidades que suman 1 (una por clase). Cross-Entropy penaliza asignar baja probabilidad a la clase correcta: L=-log(p_correcta). Esta combinación es el estándar para clasificación multiclase.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 101,
+    "status": "new",
+    "question": "¿Qué ocurre cuando el learning rate es demasiado alto en el entrenamiento de una red neuronal?",
+    "options": [
+      {
+        "text": "a. El modelo aprende muy lentamente porque los pasos de actualización son pequeños",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El modelo salta sobre los mínimos y la función de pérdida oscila o diverge en lugar de converger",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El modelo hace overfitting más rápidamente al memorizar los datos de entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El gradiente se desvanece porque los pesos crecen demasiado rápido",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Con lr alto, los pasos de actualización son tan grandes que el modelo salta de un lado a otro del mínimo, sin converger o incluso divergiendo. Learning rate scheduling (reducir lr gradualmente) suele dar mejores resultados.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 102,
+    "status": "new",
+    "question": "¿Cuál es el papel de las funciones de activación no lineales en una red neuronal MLP?",
+    "options": [
+      {
+        "text": "a. Normalizar los outputs de cada capa para que estén entre 0 y 1 y facilitar el entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Sin ellas, el MLP sería equivalente a una única transformación lineal sin importar cuántas capas tenga, incapaz de aprender relaciones no lineales",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Reducir el número de parámetros del modelo para evitar overfitting",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Calcular los gradientes de forma más eficiente durante backpropagation",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "La composición de transformaciones lineales sigue siendo lineal. Las activaciones no lineales rompen esta linealidad, permitiendo al MLP aproximar cualquier función continua (Universal Approximation Theorem).",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 103,
+    "status": "new",
+    "question": "¿Qué diferencia hay entre overfitting en ML clásico y en redes neuronales profundas?",
+    "options": [
+      {
+        "text": "a. Las redes neuronales no pueden hacer overfitting porque tienen demasiados parámetros para memorizar datos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. En ambos casos el modelo memoriza datos de entrenamiento y falla en generalizar, pero en redes profundas es más fácil dado el altísimo número de parámetros",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Las redes neuronales solo hacen overfitting en clasificación, nunca en regresión",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El overfitting en redes profundas siempre se detecta porque el training loss sube rápidamente",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Una red profunda puede tener millones de parámetros, dándole capacidad para memorizar datasets. Señales: training loss bajo pero validation loss alto (gap creciente). Soluciones: Dropout, L2 regularization, Early stopping, más datos.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 104,
+    "status": "new",
+    "question": "¿Qué es Batch Normalization y cuál es su principal beneficio en redes profundas?",
+    "options": [
+      {
+        "text": "a. Divide el dataset en mini-batches de igual tamaño para acelerar el entrenamiento por GPU",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Normaliza las activaciones de cada capa dentro de cada mini-batch, estabilizando el entrenamiento y permitiendo usar learning rates más altos",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Aplica dropout a los batches de datos de entrada antes de pasarlos a la primera capa",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Normaliza los pesos de la red al final de cada época para prevenir el exploding gradient",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Batch Norm normaliza las activaciones usando media y varianza del mini-batch, luego escala/desplaza con parámetros aprendibles. Reduce Internal Covariate Shift, permite lr más altos, actúa como regularizador.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 105,
+    "status": "new",
+    "question": "En PyTorch, ¿qué función cumple `model.eval()` y por qué es importante usarlo en inferencia?",
+    "options": [
+      {
+        "text": "a. Evalúa el modelo en el conjunto de test y devuelve las métricas de rendimiento automáticamente",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Pone el modelo en modo inferencia: desactiva Dropout y fija los parámetros de Batch Normalization para predicciones deterministas y consistentes",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Guarda los pesos del modelo entrenado en disco para usarlos más tarde",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Congela los gradientes de todas las capas para que no se actualicen durante la evaluación",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "model.eval() cambia el comportamiento de Dropout (no elimina neuronas) y BatchNorm (usa estadísticas globales). Es esencial antes de cualquier inferencia o evaluación para resultados correctos.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 106,
+    "status": "new",
+    "question": "¿Cuál es la función de pérdida correcta para una tarea de regresión en una red neuronal?",
+    "options": [
+      {
+        "text": "a. Binary Cross-Entropy, porque mide la distancia entre distribuciones de probabilidad",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Softmax Cross-Entropy, porque convierte la salida en una distribución de probabilidad",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. MSE (Mean Squared Error), porque mide la diferencia cuadrática entre el valor predicho y el real",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Hinge Loss, porque es más robusta a outliers que MSE",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Para regresión, la capa de salida tiene 1 neurona SIN activación (lineal) y se usa MSE: L=Suma(y-yhat)^2/n. Cross-Entropy es para clasificación. MAE también es válida para regresión.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 107,
+    "status": "new",
+    "question": "¿Qué diferencia a una red neuronal 'profunda' de un simple MLP de pocas capas?",
+    "options": [
+      {
+        "text": "a. Las redes profundas usan funciones de activación diferentes a las de los MLPs simples",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Las redes profundas tienen múltiples capas ocultas que aprenden representaciones jerárquicas: desde features simples (bordes) hasta conceptos complejos (caras)",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Las redes profundas usan siempre convoluciones mientras los MLPs usan capas densas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Las redes profundas no necesitan función de pérdida porque aprenden de forma no supervisada",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "La profundidad permite aprendizaje jerárquico: capa 1 detecta bordes, capa 2 texturas, capa 3 partes, capa N objetos completos. Es más eficiente que un MLP ancho superficial para tareas complejas.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 108,
+    "status": "new",
+    "question": "¿Qué es Early Stopping en el entrenamiento de redes neuronales?",
+    "options": [
+      {
+        "text": "a. Detener el entrenamiento cuando el learning rate llega a cero mediante un scheduler",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Monitorizar el validation loss y parar cuando deja de mejorar, guardando el mejor modelo visto",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Inicializar los pesos con valores pequeños para evitar el exploding gradient desde el principio",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Reducir el número de épocas a la mitad si el training loss no baja en las primeras 10 épocas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Early stopping monitoriza validation loss cada época; si no mejora en N épocas seguidas (paciencia), para el entrenamiento y restaura los pesos del mejor momento. Evita overfitting sin penalizar directamente los pesos.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 109,
+    "status": "new",
+    "question": "¿Por qué el problema XOR no puede ser resuelto por un único perceptrón (una sola neurona)?",
+    "options": [
+      {
+        "text": "a. Porque XOR produce outputs negativos y el perceptrón solo puede predecir valores positivos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Porque XOR no es linealmente separable: no existe ninguna línea recta que separe las clases 0 y 1 en el plano 2D",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Porque el perceptrón no puede procesar más de una entrada a la vez y XOR requiere dos entradas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Porque XOR es un problema de regresión y el perceptrón solo hace clasificación binaria",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "XOR: (0,0)->0, (0,1)->1, (1,0)->1, (1,1)->0. No hay ninguna línea que separe los 1s de los 0s. Se necesita al menos 1 capa oculta (MLP) para resolverlo. Este problema histórico frenó el interés en redes neuronales en los años 70.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 110,
+    "status": "new",
+    "question": "¿Por qué se usan CNNs para procesar imágenes en lugar de MLPs totalmente conectados?",
+    "options": [
+      {
+        "text": "a. Porque las CNNs son más fáciles de programar y requieren menos datos en todos los casos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Porque los MLPs tratan cada píxel como independiente ignorando la estructura espacial. Las CNNs explotan la localidad espacial con weight sharing, reduciendo drásticamente el número de parámetros",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Porque las CNNs pueden procesar imágenes en color (3 canales) y los MLPs solo en escala de grises",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Porque las CNNs usan funciones de activación especiales que los MLPs no pueden usar",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Una imagen 224x224x3 tiene ~150K entradas. Un MLP con 1000 neuronas necesitaria 150M parámetros solo en la primera capa. Las CNNs usan kernels pequeños (3x3) compartidos en toda la imagen: ~9 parámetros por filtro. Reducción de >10000 veces.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 111,
+    "status": "new",
+    "question": "Dado un feature map de 32x32, kernel 3x3, stride=1, padding=0, ¿cuál es el tamaño del feature map de salida?",
+    "options": [
+      {
+        "text": "a. 32x32",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. 30x30",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. 16x16",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. 34x34",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Fórmula: output = (W - K + 2P) / S + 1 = (32 - 3 + 0) / 1 + 1 = 30. Con padding=0 la convolución reduce el tamaño en K-1=2 por dimensión. Para mantener el tamaño (same padding) se usaría P=(K-1)/2=1.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 112,
+    "status": "new",
+    "question": "¿Qué función cumple Max Pooling en una CNN?",
+    "options": [
+      {
+        "text": "a. Aprende qué características son más importantes ajustando pesos durante el entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Reduce la resolución espacial tomando el valor máximo de cada región, proporcionando invarianza a pequeñas traslaciones y reduciendo el cómputo",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Normaliza los valores del feature map entre 0 y 1 para estabilizar el entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Aumenta el número de canales del feature map para detectar más patrones",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Max Pooling (típicamente 2x2, stride=2) toma el máximo de cada región. Reduce el tamaño a la mitad por dimensión. También da invarianza a traslación: si el patrón se mueve ligeramente, el máximo sigue siendo similar.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 113,
+    "status": "new",
+    "question": "¿Qué son las Skip Connections (conexiones residuales) en ResNet y qué problema resuelven?",
+    "options": [
+      {
+        "text": "a. Conexiones que saltan capas de pooling para mantener la resolución espacial",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Conexiones que suman la entrada de un bloque directamente con su salida (F(x)+x), permitiendo que los gradientes fluyan directamente y resolviendo el vanishing gradient en redes muy profundas",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Conexiones entre capas diferentes para hacer multi-scale feature extraction",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Conexiones que transfieren pesos de una capa a otra para reducir parámetros",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "ResNet: y = F(x,W) + x. El shortcut permite calcular dL/dx directamente sin pasar por el bloque residual, evitando el vanishing gradient. Permitió entrenar redes de 100+ capas.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 114,
+    "status": "new",
+    "question": "¿En qué consiste Transfer Learning aplicado a CNNs?",
+    "options": [
+      {
+        "text": "a. Transferir los datos de entrenamiento de un dominio a otro para aumentar el dataset",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Usar los pesos de una CNN preentrenada en un dataset grande (ej. ImageNet) como punto de partida, y reentrenar solo las capas finales para una nueva tarea con pocos datos",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Copiar la arquitectura de una CNN existente y entrenarla desde cero con pesos aleatorios",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Usar múltiples CNNs en paralelo y combinar sus predicciones mediante voting",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Transfer Learning: las capas iniciales aprenden features genéricos (bordes, texturas) útiles en cualquier dominio visual. Proceso: 1) Cargar modelo preentrenado, 2) Congelar capas tempranas, 3) Reemplazar clasificador final, 4) Entrenar. Con pocos datos el resultado es mucho mejor que entrenar desde cero.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 115,
+    "status": "new",
+    "question": "¿Qué representa un 'feature map' en una CNN?",
+    "options": [
+      {
+        "text": "a. Un mapa de los hiperparámetros del modelo con su efecto en el rendimiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La salida de aplicar un filtro (kernel) a una imagen: una matriz 2D que indica dónde y con qué intensidad está presente el patrón que detecta ese filtro",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Una visualización de los pesos aprendidos en cada capa de convolución",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El mapa de atención que indica qué píxeles son más relevantes para la clasificación",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Cada filtro en una capa conv produce un feature map. Si el filtro detecta bordes horizontales, el feature map tendrá valores altos donde hay bordes horizontales. Con K filtros, la capa produce K feature maps apilados.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 116,
+    "status": "new",
+    "question": "¿Qué fue AlexNet y por qué marcó un hito en el Deep Learning?",
+    "options": [
+      {
+        "text": "a. La primera red neuronal convolucional inventada, que demostró que las CNNs podían procesar imágenes",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La CNN que ganó ImageNet 2012 con una ventaja enorme sobre métodos clásicos, demostrando el poder del deep learning con GPUs y popularizando el campo",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El primer modelo transformer aplicado a visión por computador que superó a las CNNs",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. La arquitectura que introdujo las conexiones residuales, permitiendo redes de más de 100 capas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "AlexNet (Krizhevsky, 2012) ganó ILSVRC-2012 con 15.3% error top-5 vs 26.2% del segundo. Claves: ReLU, Dropout, GPU, data augmentation. Disparó el interés masivo en Deep Learning. ResNet introdujo skip connections en 2015.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 117,
+    "status": "new",
+    "question": "¿Cuál es el efecto de usar un stride mayor (ej. stride=2) en una capa de convolución?",
+    "options": [
+      {
+        "text": "a. Aumenta el tamaño del feature map de salida al cubrir más área",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Reduce el tamaño del feature map de salida, actuando como submuestreo similar a pooling",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Duplica el número de parámetros del kernel porque cubre más posiciones",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Hace que la convolución sea más sensible a variaciones en la posición del objeto",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Con stride=S, el kernel salta S píxeles entre aplicaciones. Output size = (W - K + 2P) / S + 1. Con stride=2 la salida es aproximadamente la mitad del tamaño. Es alternativa a pooling en modelos modernos.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 118,
+    "status": "new",
+    "question": "En una CNN para clasificación de imágenes, ¿qué papel tienen las capas completamente conectadas al final de la red?",
+    "options": [
+      {
+        "text": "a. Detectar features de alto nivel mediante convoluciones en la parte final de la red",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Tomar el volumen de features extraído por las capas conv+pooling y combinarlo globalmente para producir la predicción de clase final",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Normalizar los feature maps antes de la clasificación para evitar el vanishing gradient",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Reducir la dimensionalidad de la imagen antes de pasar a las capas de convolución",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Las capas conv extraen features locales. Las FC al final leen todo el mapa de features y aprenden combinaciones globales para clasificar. Flujo típico: Input -> Conv+ReLU+Pool (xN) -> Flatten -> FC -> Softmax.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 119,
+    "status": "new",
+    "question": "¿Qué diferencia a LeNet de arquitecturas modernas como ResNet-50?",
+    "options": [
+      {
+        "text": "a. LeNet usa convoluciones 3D mientras ResNet usa convoluciones 2D estándar",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. LeNet (1998) tiene ~60K parámetros y 5 capas para MNIST; ResNet-50 tiene ~25M parámetros, 50 capas con skip connections para imágenes complejas como ImageNet",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. LeNet solo puede hacer clasificación binaria mientras ResNet hace multiclase",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. LeNet usa max pooling mientras ResNet no usa ningún tipo de pooling",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "LeNet-5 (LeCun, 1998): 2 capas conv + 3 FC, ~60K parámetros, Tanh/Sigmoid, para dígitos 32x32. ResNet-50: 50 capas con residual blocks, ~25M parámetros, ReLU+BN, ImageNet 224x224x3.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 120,
+    "status": "new",
+    "question": "¿Qué es Data Augmentation en el entrenamiento de CNNs y para qué sirve?",
+    "options": [
+      {
+        "text": "a. Añadir más datos descargando imágenes de internet para complementar el dataset original",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Generar nuevas muestras aplicando transformaciones a imágenes existentes (rotación, volteo, zoom, brillo) para aumentar la variedad del dataset y reducir overfitting",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Aumentar la resolución de las imágenes de entrada mediante técnicas de super-resolución",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Duplicar el dataset original sin transformaciones para que el modelo vea cada imagen dos veces",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Data Augmentation crea variaciones: horizontal flip, rotación, crop aleatorio, cambio de brillo. El modelo nunca ve exactamente la misma imagen dos veces. Especialmente útil con pocos datos y es estándar en el pipeline de entrenamiento.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 121,
+    "status": "new",
+    "question": "¿Cuál es la diferencia entre Fine-tuning y Feature Extraction en Transfer Learning?",
+    "options": [
+      {
+        "text": "a. Feature Extraction entrena todas las capas; Fine-tuning solo entrena la última capa",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Feature Extraction congela TODAS las capas preentrenadas y solo entrena el nuevo clasificador; Fine-tuning descongela algunas capas superiores para adaptarlas al nuevo dominio",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Son el mismo proceso pero aplicados a datasets de diferente tamaño",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Fine-tuning requiere siempre partir de pesos aleatorios en lugar de pesos preentrenados",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Feature Extraction: capas conv congeladas, solo se entrena el clasificador final. Rápido, necesita pocos datos. Fine-tuning: adicionalmente se descongelan y reentrenan capas superiores con lr muy bajo. Mejor resultado pero riesgo de catastrofic forgetting.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 122,
+    "status": "new",
+    "question": "¿Cuál es el principal problema de las RNNs básicas para procesar secuencias largas?",
+    "options": [
+      {
+        "text": "a. No pueden procesar secuencias de longitud variable porque el tamaño de la red está fijo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Sufren vanishing gradient: la información de tokens lejanos se diluye al propagarse a través de muchos pasos temporales, haciendo que el modelo olvide contexto largo",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Son muy lentas porque procesan todos los tokens en paralelo sin poder aprovechar la GPU",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Generan secuencias de longitud fija independientemente de la entrada",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "En RNN h(t) = f(W*h(t-1) + U*x(t)). Al propagar gradientes hacia atrás (BPTT), se multiplica repetidamente por W. Si |W|<1, el gradiente se desvanece. Para secuencias de 100+ tokens, la información del token 1 prácticamente no llega al token 100.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 123,
+    "status": "new",
+    "question": "¿Cómo resuelven las LSTMs el problema del vanishing gradient de las RNNs?",
+    "options": [
+      {
+        "text": "a. Usando un learning rate adaptativo que previene que los gradientes se vuelvan cero",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Mediante gates (Forget, Input, Output) que controlan selectivamente qué información mantener en el Cell State, que actúa como autopista para el gradiente",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Procesando la secuencia en ambas direcciones para capturar más contexto",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Añadiendo conexiones residuales entre cada paso temporal similar a ResNet",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El Cell State de LSTM puede mantener información durante muchos pasos porque las actualizaciones son aditivas: Ct = ft*Ct-1 + it*c_tilde. El gradiente puede fluir a través del Cell State sin desvanecerse.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 124,
+    "status": "new",
+    "question": "¿Qué hace el Forget Gate en una LSTM?",
+    "options": [
+      {
+        "text": "a. Decide qué nueva información añadir al Cell State en el paso actual",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Controla qué parte del Cell State anterior se mantiene o descarta, aprendiendo qué información del pasado ya es irrelevante",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Genera el output final de la LSTM para cada paso temporal",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Reinicia el Cell State a cero al inicio de cada nueva secuencia",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Forget Gate: ft = sigma(Wf*[ht-1, xt] + bf). Valores cerca de 0 -> olvida esa dimension del Cell State; cerca de 1 -> la mantiene. Ejemplo: en un modelo de lenguaje, cuando empieza un nuevo sujeto, el Forget Gate aprende a olvidar el género/número del sujeto anterior.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 125,
+    "status": "new",
+    "question": "¿Cuál es la intuición del mecanismo de Attention en los modelos de secuencia?",
+    "options": [
+      {
+        "text": "a. Filtrar las palabras irrelevantes de la secuencia eliminándolas del procesamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Calcular una suma ponderada de todos los valores de la entrada, donde los pesos indican cuánta atención prestar a cada posición según su relevancia para el token actual",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Aumentar la velocidad de procesamiento al procesar solo los tokens más importantes en paralelo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Reemplazar las funciones de activación por operaciones de atención más eficientes",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Attention: dado el token actual (Query), calculamos su similitud con todos los tokens (Keys), obtenemos pesos con softmax, y sumamos los Values ponderados. Ejemplo: en 'El banco [MASK] fue cerrado', la palabra enmascarada atendera más a 'banco' y 'cerrado'.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 126,
+    "status": "new",
+    "question": "¿Por qué los Transformers pueden entrenarse más rápido que las LSTMs en secuencias largas?",
+    "options": [
+      {
+        "text": "a. Porque los Transformers son modelos más pequeños con menos parámetros",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Porque los Transformers procesan todos los tokens en paralelo mediante Self-Attention, mientras las LSTMs procesan token por token de forma secuencial",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Porque los Transformers usan un optimizador especial más eficiente que Adam",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Porque los Transformers no necesitan backpropagation al usar atención directa",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Las RNN/LSTM tienen dependencias secuenciales: h(t) depende de h(t-1), imposible paralelizar. Los Transformers calculan Self-Attention de todos los tokens simultáneamente. GPUs modernas explotan esta paralelización masiva.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 127,
+    "status": "new",
+    "question": "¿Qué es el Positional Encoding en los Transformers y por qué es necesario?",
+    "options": [
+      {
+        "text": "a. Un mecanismo que ordena los tokens alfabéticamente antes de procesarlos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Información de posición añadida a los embeddings porque Self-Attention es invariante al orden: sin ella, el Transformer no distinguiría el orden de las palabras",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Un índice numérico que indica la posición de cada capa en la arquitectura del Transformer",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El proceso de codificar el texto en vectores numéricos antes de entrar al Transformer",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Self-Attention calcula similitudes entre tokens sin importar su posición: sin PE, 'gato come ratón' y 'ratón come gato' producirían la misma representación. Se añaden funciones sinusoidales de la posición al embedding de cada token.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 128,
+    "status": "new",
+    "question": "¿Cuál es la principal diferencia entre BERT y GPT en arquitectura y uso?",
+    "options": [
+      {
+        "text": "a. BERT usa LSTMs y GPT usa Transformers; por eso GPT es más moderno y eficiente",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. BERT es un encoder bidireccional (ve contexto izquierda y derecha) óptimo para entender texto; GPT es un decoder autoregresivo (solo ve contexto anterior) óptimo para generar texto",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. BERT solo funciona en inglés mientras que GPT soporta múltiples idiomas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. BERT genera texto token por token como GPT pero con mayor precisión gramatical",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "BERT (Encoder-only): bidireccional, pre-training con Masked LM. Ideal para: clasificación, NER, Q&A. GPT (Decoder-only): causal attention, solo ve tokens anteriores. Pre-training: Language Modeling. Ideal para: generación, chat. GPT-4, Claude son GPT-style.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 129,
+    "status": "new",
+    "question": "¿Qué es Multi-Head Attention y qué ventaja ofrece sobre Single-Head Attention?",
+    "options": [
+      {
+        "text": "a. Usa múltiples capas de atención secuenciales en lugar de una sola para profundizar la representación",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Aplica la atención en paralelo con diferentes proyecciones (cabezas), permitiendo al modelo capturar distintos tipos de relaciones entre tokens simultáneamente",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Procesa múltiples secuencias de entrada en paralelo para acelerar el entrenamiento en batch",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Cada cabeza atiende a una parte diferente de la secuencia sin solapamiento entre cabezas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Multi-Head: cada cabeza puede especializar en distintas relaciones (sintácticas, semánticas, correferencias). 8-16 cabezas son comunes en LLMs modernos.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 130,
+    "status": "new",
+    "question": "En la fórmula Attention(Q,K,V) = softmax(QK^T / sqrt(d)) * V, ¿qué representa el factor sqrt(d)?",
+    "options": [
+      {
+        "text": "a. El número de cabezas de atención en Multi-Head Attention",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Un factor de escala para evitar que los productos punto sean demasiado grandes cuando d es alto, lo que haría el softmax demasiado saturado y los gradientes pequeños",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. La dimensión de la secuencia de entrada (longitud en tokens)",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. La tasa de dropout aplicada a los pesos de atención",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Con dimensión d alta, QK^T puede tener magnitud O(d), haciendo el softmax extremadamente saturado. Al dividir por sqrt(d) se mantiene la varianza del producto punto ~1 independientemente de d, estabilizando los gradientes.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 131,
+    "status": "new",
+    "question": "¿Qué es un Encoder-Decoder Transformer y para qué tareas se usa?",
+    "options": [
+      {
+        "text": "a. Un Transformer que tiene dos fases: codifica la imagen y luego decodifica el texto",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Arquitectura donde el Encoder procesa la entrada y el Decoder genera la salida token a token, usando Cross-Attention para conectarlos. Ideal para traducción y resumen",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Un modelo con dos Transformers independientes que votan sobre la predicción final",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Un Transformer que comprime el texto a un vector fijo y lo expande al idioma destino",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Encoder-Decoder (T5, BART, arquitectura original): Encoder bidireccional -> representación de entrada. Decoder autoregresivo con Cross-Attention sobre encoder -> genera tokens. Usado en traducción automática, resumen, generación de código.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 132,
+    "status": "new",
+    "question": "¿Qué es el preentrenamiento (pre-training) de un LLM y para qué sirve?",
+    "options": [
+      {
+        "text": "a. Un proceso de preparación del hardware antes de iniciar el entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Entrenar el modelo en grandes corpus de texto prediciendo el siguiente token, aprendiendo representaciones lingüísticas ricas y conocimiento general antes del fine-tuning",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. La primera fase donde se ajustan solo los embeddings antes de entrenar las capas de atención",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Filtrar y limpiar los datos antes de empezar el entrenamiento principal",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Pre-training: el modelo aprende a predecir el siguiente token en trillones de palabras. Aprende gramática, hechos, razonamiento implícitamente. Fine-tuning posterior adapta el comportamiento a una tarea específica.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 133,
+    "status": "new",
+    "question": "¿Qué problema histórico de las RNNs resuelven los Transformers para secuencias largas?",
+    "options": [
+      {
+        "text": "a. El problema de memoria de GPU, ya que los Transformers usan menos memoria que las LSTMs",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El cuello de botella del vector de contexto fijo en seq2seq y el vanishing gradient, ya que Attention conecta directamente cualquier par de tokens sin importar la distancia",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. La incapacidad de las RNNs para procesar texto multilingüe",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. La imposibilidad de las RNNs de hacer clasificación de texto",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Los seq2seq RNN comprimían toda la entrada en un único vector de contexto, perdiendo información en secuencias largas. Attention crea rutas directas entre cualquier token de entrada y salida. Distancia O(1) en Transformers vs O(n) en RNNs.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 134,
+    "status": "new",
+    "question": "¿Cómo genera texto un LLM como GPT en la fase de inferencia?",
+    "options": [
+      {
+        "text": "a. Busca en una base de datos de texto indexado la frase más similar al prompt",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Genera tokens de forma autoregresiva: predice el token más probable dado el contexto, lo añade y repite hasta producir la respuesta completa",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Procesa el prompt y genera toda la respuesta de una vez con una única pasada forward",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Combina fragmentos de texto del corpus de entrenamiento de forma estadística",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Autoregresivo: P(texto) = P(t1)*P(t2|t1)*P(t3|t1,t2)... En cada paso el modelo ve todos los tokens anteriores y predice una distribución sobre el vocabulario. Temperatura controla la creatividad: alta->más aleatorio, baja->más determinista.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 135,
+    "status": "new",
+    "question": "¿Qué es RAG (Retrieval Augmented Generation) y qué problema de los LLMs resuelve?",
+    "options": [
+      {
+        "text": "a. Una técnica para hacer los LLMs más rápidos almacenando en caché las respuestas frecuentes",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Un patrón que combina búsqueda en una base de conocimiento externa con la generación del LLM, permitiendo acceder a información actualizada o privada sin reentrenamiento",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Un método para regularizar el fine-tuning que reduce el riesgo de alucinaciones",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Una arquitectura que añade un módulo de recuperación de información dentro de la red neuronal",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "LLMs tienen conocimiento estático hasta su fecha de corte y no conocen datos privados. RAG: 1) Retrieve: busca documentos relevantes (vector search), 2) Augment: añade al prompt, 3) Generate: LLM responde con ese contexto. Usado en chatbots empresariales, Q&A sobre documentos.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 136,
+    "status": "new",
+    "question": "¿Cuál es el proceso de entrenamiento de una GAN (Generative Adversarial Network)?",
+    "options": [
+      {
+        "text": "a. El Generador y el Discriminador se entrenan por separado en dos datasets diferentes y luego se combinan",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El Generador aprende a crear datos falsos que engañen al Discriminador, mientras el Discriminador aprende a distinguir real de falso: compiten hasta que el Generador produce datos realistas",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Se entrena primero el Discriminador hasta la convergencia y luego el Generador usa sus gradientes",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El Generador crea variaciones de imágenes reales mientras el Discriminador clasifica la clase de imagen",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "GAN (Goodfellow, 2014): juego minimax entre G y D. G genera x_fake=G(z) desde ruido z. D clasifica si x es real o falso. Problemas: mode collapse, entrenamiento inestable. Para imágenes fue SOTA hasta los Diffusion Models.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 137,
+    "status": "new",
+    "question": "¿Cómo funcionan los Diffusion Models para generar imágenes?",
+    "options": [
+      {
+        "text": "a. Toman una imagen en baja resolución y la amplifican gradualmente hasta la resolución deseada",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Durante el entrenamiento aprenden a revertir un proceso de adición de ruido; en inferencia parten de ruido puro y eliminan el ruido iterativamente condicionados en un texto o condición",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Generan imágenes mediante búsqueda: exploran el espacio latente hasta encontrar la imagen que coincide con el prompt",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Usan un encoder que convierte el prompt en un vector latente y un decoder que lo convierte en píxeles directamente",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Forward process: añade ruido gaussiano progresivamente hasta obtener ruido puro (T pasos). Reverse process: red neuronal aprende el ruido añadido. Inferencia: x_T~N(0,I) -> denoising iterativo -> x_0. Stable Diffusion, DALL-E 3, Midjourney son diffusion models.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 138,
+    "status": "new",
+    "question": "¿Qué es el Fine-tuning de un LLM y cuándo tiene sentido usarlo en lugar de prompting?",
+    "options": [
+      {
+        "text": "a. Añadir más capas de Transformer al modelo base para aumentar su capacidad de razonamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Reentrenar el modelo sobre datos específicos del dominio para adaptar su comportamiento o conocimiento cuando el prompting no es suficientemente preciso o eficiente",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Eliminar del modelo el conocimiento irrelevante para la tarea usando datos negativos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Convertir un LLM generativo en un clasificador añadiendo una capa de clasificación al final",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Fine-tuning cuando: el dominio es muy específico (medicina, derecho), se necesita estilo consistente, o el modelo base alucina mucho en el dominio. Alternativas ligeras: LoRA, RLHF. Prompting (zero/few-shot) siempre es el punto de partida.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 139,
+    "status": "new",
+    "question": "¿Qué diferencia hay entre Zero-shot, One-shot y Few-shot prompting?",
+    "options": [
+      {
+        "text": "a. Se refieren al número de veces que se hace la misma pregunta al LLM para obtener respuestas consistentes",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Zero-shot: sin ejemplos en el prompt; One-shot: 1 ejemplo; Few-shot: varios ejemplos (3-10) que muestran al modelo el formato o tarea esperada",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Hacen referencia a cuántas iteraciones de fine-tuning se realizan sobre el modelo base",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Indican el número de modelos diferentes que se consultan y combinan para la respuesta final",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "In-context learning: Zero-shot: sin ejemplos. Few-shot: ejemplos en el prompt guían al modelo sobre el formato y tarea sin actualizar pesos. Few-shot puede igualar fine-tuning para muchas tareas con buenos ejemplos.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 140,
+    "status": "new",
+    "question": "¿Qué son las alucinaciones en los LLMs y por qué ocurren?",
+    "options": [
+      {
+        "text": "a. Errores de programación que hacen que el modelo repita frases aleatoriamente sin coherencia",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Respuestas que suenan coherentes y confiadas pero contienen información falsa o inventada, porque el modelo genera texto probable sin mecanismo de verificación factual",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Respuestas que el modelo da cuando no entiende el idioma del prompt y genera texto en otro idioma",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El fenómeno donde el modelo repite exactamente fragmentos de su corpus de entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Los LLMs optimizan la probabilidad del siguiente token, no la veracidad. Pueden inventar citas, fechas, personas inexistentes con total confianza. Mitigaciones: RAG, temperature baja, chain-of-thought, verificación externa.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 141,
+    "status": "new",
+    "question": "¿Qué es el context window (ventana de contexto) de un LLM?",
+    "options": [
+      {
+        "text": "a. El tamaño del dataset usado durante el pre-training, medido en número de tokens procesados",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El número máximo de tokens (prompt + respuesta) que el modelo puede procesar en una inferencia; todo lo que exceda se trunca o pierde",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. La ventana temporal durante la que el modelo puede responder antes de necesitar reiniciar",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El número de tokens del vocabulario que el modelo conoce",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Context window define la memoria de trabajo del LLM. GPT-3: 4K tokens. GPT-4 Turbo: 128K. Claude 3: 200K. Todo lo que supere se pierde. Impacta: análisis de documentos largos, conversaciones extendidas. Limitado por memoria O(n^2) de self-attention.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 142,
+    "status": "new",
+    "question": "¿Qué es Hugging Face y qué herramientas proporciona para trabajar con LLMs?",
+    "options": [
+      {
+        "text": "a. Una empresa que proporciona GPUs en la nube especializadas en entrenamiento de LLMs",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Una plataforma y librería open-source con modelos preentrenados, datasets y herramientas (transformers, tokenizers, pipelines) para usar y entrenar modelos de NLP e IA",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Una herramienta de visualización para entender las capas de atención en Transformers",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Un estándar de formato para compartir pesos de modelos entre frameworks",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Hugging Face Hub: >500K modelos. Librería transformers: API unificada para BERT, GPT, T5, LLaMA con AutoModel, pipeline(). Se ha convertido en el estándar de facto para modelos open-source.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 143,
+    "status": "new",
+    "question": "¿Cuál es la diferencia entre un VAE (Variational Autoencoder) y un Autoencoder clásico?",
+    "options": [
+      {
+        "text": "a. El VAE usa capas convolucionales mientras el Autoencoder clásico solo usa capas densas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El VAE aprende una distribución de probabilidad en el espacio latente (mu y sigma) en lugar de un punto fijo, permitiendo generar nuevas muestras muestreando del espacio latente continuo",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El VAE puede comprimir imágenes sin pérdida mientras el Autoencoder clásico siempre pierde información",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El VAE usa dos encoders paralelos mientras el Autoencoder clásico solo usa uno",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Autoencoder clásico: x -> z (vector fijo) -> x_hat. Solo reconstrucción/compresión. VAE: x -> (mu, sigma) -> z = mu + eps*sigma -> x_hat. Espacio latente continuo y regularizado. Loss: reconstrucción + KL divergence. Base para modelos generativos como Stable Diffusion.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 144,
+    "status": "new",
+    "question": "¿Qué es el Data Drift y por qué supone un problema para modelos en producción?",
+    "options": [
+      {
+        "text": "a. La pérdida de datos de entrenamiento cuando el servidor de almacenamiento falla",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El fenómeno por el cual la distribución de los datos en producción cambia con el tiempo respecto a los datos de entrenamiento, haciendo que el modelo pierda rendimiento sin que sus pesos cambien",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. La variación en la velocidad de inferencia cuando aumenta el número de peticiones simultáneas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Los errores que aparecen al migrar el modelo de un framework a otro en producción",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Ejemplo: un modelo de fraude de 2022 puede fallar en 2024 si los patrones han cambiado. Data drift: P(X) cambia. Concept drift: P(Y|X) cambia (más grave). Solución: monitorizar métricas en producción, reentrenar periódicamente.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 145,
+    "status": "new",
+    "question": "¿Por qué se usa Docker en el despliegue de modelos de Machine Learning?",
+    "options": [
+      {
+        "text": "a. Para acelerar el tiempo de inferencia encapsulando el modelo en un entorno optimizado para GPU",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Para empaquetar el modelo junto con todas sus dependencias (Python, librerías, versiones exactas) en un contenedor reproducible que funciona igual en cualquier máquina o cloud",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Para encriptar los pesos del modelo y proteger la propiedad intelectual durante el despliegue",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Para distribuir automáticamente las peticiones de inferencia entre múltiples servidores",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Docker resuelve 'works on my machine'. Un contenedor incluye: código, versión exacta de Python, torch==2.1.0, numpy==1.24.0, etc. La imagen es inmutable y reproducible en local, CI/CD, AWS, GCP. Estándar en producción ML.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 146,
+    "status": "new",
+    "question": "¿Qué diferencia hay entre Batch Inference y Real-time Inference?",
+    "options": [
+      {
+        "text": "a. Batch usa GPU y Real-time usa CPU; por eso Batch es más rápido para grandes volúmenes",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Batch procesa muchas muestras de forma programada (ej. cada noche); Real-time responde a cada petición individual con baja latencia via API",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Batch es para modelos de clasificación y Real-time para modelos de regresión",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Real-time requiere reentrenar el modelo con cada petición; Batch entrena periódicamente",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Batch: 1M predicciones de golpe cada 24h (recomendaciones para email). No importa la latencia. Real-time: respuesta en <100ms (detección de fraude, chatbot). Edge: el modelo corre en el dispositivo del usuario.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 147,
+    "status": "new",
+    "question": "¿Qué es MLflow y para qué se usa en proyectos de Machine Learning?",
+    "options": [
+      {
+        "text": "a. Una librería para construir pipelines de datos que alimentan automáticamente al modelo en producción",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Una plataforma open-source de MLOps para trackear experimentos (métricas, parámetros, artefactos), versionar modelos y facilitar el despliegue reproducible",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Un framework alternativo a PyTorch y TensorFlow que simplifica el entrenamiento de redes neuronales",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Una herramienta de monitorización que detecta automáticamente data drift en producción",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "MLflow Tracking: mlflow.log_metric, log_param, log_artifact. Guarda todo en un servidor central. MLflow Model Registry versiona modelos (Staging -> Production). Facilita reproducir experimentos y saber qué modelo está en producción.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 148,
+    "status": "new",
+    "question": "¿Qué es CI/CD en MLOps?",
+    "options": [
+      {
+        "text": "a. Un proceso de reentrenamiento continuo con datos nuevos cada hora para mantener el modelo actualizado",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Automatizar los tests (CI: verificar que código y modelo funcionan) y el despliegue (CD: poner en producción cuando los tests pasan), aplicando principios de software engineering a ML",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Una metodología donde Data Scientists y Engineers trabajan en el mismo sprint",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Un sistema de versionado que guarda automáticamente checkpoints durante el entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "CI en ML: tests del código de preprocesamiento, validación del schema, tests de que el modelo supera un baseline. CD: si los tests pasan, el pipeline despliega automáticamente el nuevo modelo. Herramientas: GitHub Actions, Jenkins, DVC.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 149,
+    "status": "new",
+    "question": "¿Qué es el Concept Drift y cómo se diferencia del Data Drift?",
+    "options": [
+      {
+        "text": "a. Son sinónimos que describen el mismo fenómeno de cambio en los datos de producción",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Data Drift: cambia la distribución de los inputs P(X). Concept Drift: cambia la relación entre inputs y outputs P(Y|X), siendo más grave porque el modelo aprende algo que ya no es verdad",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Concept Drift solo afecta a modelos de NLP mientras Data Drift afecta a modelos de visión",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Data Drift se detecta automáticamente; Concept Drift requiere supervisión humana siempre",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Modelo de crédito: Data drift = los ingresos medios han subido. Concept drift = durante una crisis, ingresos altos ya no garantizan solvencia. El concept drift es más grave: predicciones incorrectas aunque los datos parezcan normales.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  },
+  {
+    "num": 150,
+    "status": "new",
+    "question": "¿Qué ventajas tiene el despliegue Edge (en el dispositivo) frente al despliegue en la nube?",
+    "options": [
+      {
+        "text": "a. Los modelos edge siempre tienen mejor precisión porque se adaptan a cada usuario",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Menor latencia (sin viaje de red), funciona sin conexión, mayor privacidad (los datos no salen del dispositivo) y menor coste en cloud, aunque el modelo debe ser más pequeño y optimizado",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El despliegue edge permite usar modelos más grandes porque los dispositivos tienen más RAM que servidores",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Edge deployment elimina la necesidad de actualizar el modelo porque el dispositivo aprende continuamente",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Edge AI: reconocimiento de voz en iPhone, detección en cámara de seguridad. Ventajas: privacidad, latencia <10ms, funciona offline. Desafíos: hardware limitado. Soluciones: quantización, pruning, Knowledge Distillation. Frameworks: TensorFlow Lite, ONNX Runtime.",
+    "hasCorrectMarked": true,
+    "rightAnswer": ""
+  }
+]

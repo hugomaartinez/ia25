@@ -1,0 +1,3574 @@
+[
+  {
+    "num": 1,
+    "status": "correct",
+    "question": "El entrenamiento de redes neuronales se basa en optimización. ¿Qué es Gradient Descent y cuál es su papel en el entrenamiento de redes neuronales?",
+    "options": [
+      {
+        "text": "a. Método para calcular automáticamente los gradientes de funciones complejas usando la regla de la cadena",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Algoritmo de optimización que actualiza pesos en la dirección opuesta al gradiente de la pérdida, reduciendo iterativamente el error del modelo",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Gradient descent usa el gradiente de la función de pérdida para guiar los ajustes de pesos en la dirección que más reduce el error."
+      },
+      {
+        "text": "c. Técnica para encontrar el mínimo global de funciones de pérdida complejas garantizando convergencia óptima",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Técnica de regularización que añade ruido a los gradientes durante el entrenamiento para prevenir sobreajuste a los datos de entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Gradient Descentes el algoritmo de optimización fundamental utilizado para entrenar redes neuronales. Funciona así: (1) calcular la pérdida (diferencia entre predicción y valor real), (2) calcular los gradientes de la pérdida respecto a cada parámetro (peso), (3) actualizar los pesos en ladirección opuesta al gradientepara reducir la pérdida. Es como descender por una montaña usando la pendiente: cada paso va en la dirección de máximo descenso.",
+    "rightAnswer": "A resposta correcta é: Algoritmo de optimización que actualiza pesos en la dirección opuesta al gradiente de la pérdida, reduciendo iterativamente el error del modelo",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 2,
+    "status": "incorrect",
+    "question": "¿Cuál es la diferencia clave entre modelos paramétricos (como regresión lineal) y no paramétricos (como árboles de decisión) respecto al overfitting?",
+    "options": [
+      {
+        "text": "a. Los modelos paramétricos requieren optimización de sus hiperparámetros para poder evitar el overfitting. Los no parametricos se adaptan directamente a la distribución de los datos.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Los no paramétricos tienen significativamente más riesgo de overfitting."
+      },
+      {
+        "text": "b. La diferencia está en la velocidad de entrenamiento, el overfitting depende de los otros hiperparámetros de entrenamiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Paramétricos son para clasificación; no paramétricos para regresión. Ambos pueden ser propensos a overfitting o no en función del proceso de optimización.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Los paramétricos tienen una estructura fija que los hace menos propensos a overfitting",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Modelos paramétricos(regresión lineal, logística): Tienen estructura fija con número predeterminado de parámetros. Asumen forma funcional específica (ej: línea recta). Sonmenos propensos a overfittingpero pueden no capturar relaciones complejas (pueden hacer underfitting).Modelos no paramétricos(árboles, KNN): No asumen estructura fija; adaptan su complejidad a los datos. Son más flexibles peromás propensos a overfittingporque pueden ajustarse demasiado a los datos de entrenamiento.",
+    "rightAnswer": "A resposta correcta é:Los paramétricos tienen una estructura fija que los hace menos propensos a overfitting",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 3,
+    "status": "correct",
+    "question": "¿Qué es un Perceptrón y qué limitación fundamental tiene el perceptrón simple?",
+    "options": [
+      {
+        "text": "a. Es un tipo de función de activación como ReLU.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Es la neurona artificial básica; su limitación es que solo resuelve problemas linealmente separables.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. No puede aprender funciones como XOR."
+      },
+      {
+        "text": "c. Es una red neuronal profunda con múltiples capas ocultas.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Es un algoritmo de optimización para entrenar redes neuronales.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "ElPerceptrónes la unidad fundamental de una red neuronal, inspirada en el funcionamiento de una neurona biológica. Consiste en entradas ponderadas, una suma ponderada y una función de activación. Su limitación fundamental es que solo puede resolver problemaslinealmente separables(no puede aprender XOR, por ejemplo).",
+    "rightAnswer": "A resposta correcta é: Es la neurona artificial básica; su limitación es que solo resuelve problemas linealmente separables.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 4,
+    "status": "notanswered",
+    "question": "Los coeficientes β de una regresión lineal son interpretables. Si el coeficiente de una feature \"edad\" es β=0.5 y el target es \"salario\", ¿cómo se interpreta este coeficiente?",
+    "options": [
+      {
+        "text": "a. Por cada año adicional de edad, el salario predicho aumenta 0.5 unidades de la escala del target, manteniendo otras features constantes",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La correlación entre edad y salario es exactamente 0.5",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. La edad explica el 50% de la varianza del salario; las otras features explican el otro 50%",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. La característica edad tiene la mitad de importancia que la característica más importante del modelo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El coeficiente β=0.5 significa:por cada unidad de aumento en \"edad\" (1 año), el salario predicho aumenta 0.5 unidades(la unidad del target, ej: miles de euros), manteniendo todas las demás features constantes. Esta interpretación asume que la feature no ha sido transformada (si está estandarizada, la interpretación cambia). La magnitud del coeficiente solo indica importancia si las features están en la misma escala o estandarizadas.",
+    "rightAnswer": "A resposta correcta é:Por cada año adicional de edad, el salario predicho aumenta 0.5 unidades de la escala del target, manteniendo otras features constantes",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 5,
+    "status": "correct",
+    "question": "¿Qué característica fundamental distingue al Deep Learning (Aprendizaje Profundo) dentro del campo general del Machine Learning?",
+    "options": [
+      {
+        "text": "a. Es cualquier algoritmo de ML que se ejecuta en una GPU.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Es sinónimo estrictamente de Aprendizaje No Supervisado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Es un subcampo basado en redes neuronales multicapa que aprenden representaciones jerárquicas de los datos.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. La profundidad (capas) es la clave para la jerarquía de abstracciones."
+      },
+      {
+        "text": "d. Se caracteriza por el uso exclusivo de Árboles de Decisión muy profundos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El Deep Learning se basa en redes neuronales artificiales con múltiples capas ocultas (arquitecturas profundas). Estas capas permiten aprender jerarquías de representaciones de datos, desde características simples a complejas, de forma automática.",
+    "rightAnswer": "A resposta correcta é: Es un subcampo basado en redes neuronales multicapa que aprenden representaciones jerárquicas de los datos.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 6,
+    "status": "incorrect",
+    "question": "¿Qué métrica de evaluación de regresión penaliza más severamente los errores grandes (y por tanto, es más sensible a los valores atípicos u outliers)?",
+    "options": [
+      {
+        "text": "a. Accuracy (Exactitud).",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Métrica de clasificación."
+      },
+      {
+        "text": "b. Recall (Sensibilidad).",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Error Cuadrático Medio (MSE).",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Error Absoluto Medio (MAE).",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "ElError Cuadrático Medio (MSE)eleva al cuadrado las diferencias entre predicción y valor real. Esto hace que los errores grandes \"pesen\" mucho más en el resultado final que los errores pequeños, a diferencia del MAE (Error Absoluto Medio) que los trata linealmente.",
+    "rightAnswer": "A resposta correcta é: Error Cuadrático Medio (MSE).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 7,
+    "status": "incorrect",
+    "question": "¿Cuál de estos modelos es inherentemente más robusto a valores atípicos (outliers) en las variables de entrada?",
+    "options": [
+      {
+        "text": "a. Árboles de Decisión",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Regresión Lineal",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Regresión Logística",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. K-Means",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Los centroides se calculan como la media, la cual es extremadamente sensible a valores extremos."
+      }
+    ],
+    "feedback": "Los Árboles de Decisión parten el espacio basándose en umbrales de valor, por lo que un valor extremadamente alto no afecta al resto de divisiones, a diferencia de modelos basados en medias o distancias.",
+    "rightAnswer": "A resposta correcta é: Árboles de Decisión",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 8,
+    "status": "notanswered",
+    "question": "Tienes un dataset con valores faltantes. ¿Qué criterio distingue mejor MAR de MNAR ?",
+    "options": [
+      {
+        "text": "a. En MAR, la causa está capturada por variables observadas; en MNAR depende de información no observada (o del propio valor).",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. En MAR siempre basta borrar filas sin sesgo; en MNAR siempre basta imputar con la media.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. MAR implica que el valor faltante nunca influye; MNAR implica que siempre influye.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. En MAR el patrón es completamente aleatorio; en MNAR también.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "La diferencia clave esdónde está la causade la ausencia: en variables observadas (MAR) o en información no observada / el propio valor faltante (MNAR).",
+    "rightAnswer": "A resposta correcta é: En MAR, la causa está capturada por variables observadas; en MNAR depende de información no observada (o del propio valor).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 9,
+    "status": "correct",
+    "question": "Un banco quiere detectar usos fraudulentos de tarjetas de crédito. Su base de datos contiene 2 millones de transacciones con: fecha, hora, localización, cantidad, tipo de comercio y saldos del titular. ¿Cómo debe plantearse este problema?",
+    "options": [
+      {
+        "text": "a. Aprendizaje no supervisado, detección de anomalías, identificando transacciones que se desvían significativamente del patrón normal",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Sin etiquetas, buscamos comportamientos anómalos que podrían indicar fraude."
+      },
+      {
+        "text": "b. Regresión supervisada para predecir la probabilidad numérica de fraude de cada transacción",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Clustering con K-means para agrupar transacciones y considerar fraudulentos los clusters más pequeños",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Aprendizaje supervisado de clasificación binaria, entrenando con transacciones fraudulentas y legítimas identificadas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Sin etiquetas de fraude, debemos usar aprendizaje no supervisado. La detección de fraude sin etiquetas es un caso típico de detección de anomalías.",
+    "rightAnswer": "A resposta correcta é: Aprendizaje no supervisado, detección de anomalías, identificando transacciones que se desvían significativamente del patrón normal",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 10,
+    "status": "notanswered",
+    "question": "¿Cuál es la función conceptual principal del conjunto de validación (validation set) en el ciclo de vida del ML?",
+    "options": [
+      {
+        "text": "a. Incrementar la cantidad de datos disponibles para entrenar el modelo.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Reducir el coste computacional durante el entrenamiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Ajustar hiperparámetros y comparar diferentes modelos sin comprometer la evaluación final.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Evaluar de forma definitiva el rendimiento del modelo en producción.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El conjunto de validación actúa como un proxy para evaluar decisiones de modelado (hiperparámetros, elección de algoritmo) sin contaminar la evaluación final, que se reserva para el conjunto de Test.",
+    "rightAnswer": "A resposta correcta é: Ajustar hiperparámetros y comparar diferentes modelos sin comprometer la evaluación final.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 11,
+    "status": "correct",
+    "question": "La reducción de dimensionalidad es una técnica importante en aprendizaje no supervisado. ¿Cuál es el objetivo de la reducción de dimensionalidad y qué beneficios proporciona?",
+    "options": [
+      {
+        "text": "a. Crear nuevas variables artificiales combinando las originales para capturar interacciones no lineales entre features.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Eliminar outliers y datos ruidosos del dataset para mejorar la calidad de los datos de entrenamiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Reducir el número de variables en un dataset, útil cuando hay características redundantes o irrelevantes; beneficios incluyen menor tiempo de entrenamiento y mejor precisión del modelo.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. La reducción de dimensionalidad simplifica el problema eliminando información redundante, lo que puede mejorar tanto la eficiencia como el rendimiento del modelo."
+      },
+      {
+        "text": "d. Reducir el número de instancias en un dataset mediante muestreo estratificado para acelerar el entrenamiento en datasets muy grandes.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Reducción de dimensionalidadbusca reducir el número de variables (features) en un dataset. Es útil cuando se trabaja con datos de alta dimensionalidad donde algunas características pueden ser redundantes o irrelevantes. Los beneficios incluyen: reducir el tiempo de entrenamiento, mejorar la precisión del modelo (evitando la \"maldición de la dimensionalidad\"), y facilitar la visualización. Una técnica común esPrincipal Component Analysis (PCA).",
+    "rightAnswer": "A resposta correcta é:Reducir el número de variables en un dataset, útil cuando hay características redundantes o irrelevantes; beneficios incluyen menor tiempo de entrenamiento y mejor precisión del modelo.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 12,
+    "status": "incorrect",
+    "question": "¿Qué indica un Coeficiente de Silueta (Silhouette Score) cercano a +1?",
+    "options": [
+      {
+        "text": "a. Que el modelo ha sobreajustado (overfitting).",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. No aplica directamente en este sentido."
+      },
+      {
+        "text": "b. Que los clusters están densos y bien separados entre sí.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Que los clusters se solapan significativamente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Que las muestras han sido asignadas al cluster equivocado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El coeficiente de silueta va de -1 a 1. Un valor cercano a +1 indica que las muestras están bien separadas de los clusters vecinos y bien agrupadas dentro de su propio cluster. 0 indica solapamiento, y valores negativos indican asignación errónea.",
+    "rightAnswer": "A resposta correcta é: Que los clusters están densos y bien separados entre sí.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 13,
+    "status": "incorrect",
+    "question": "Cuando se utiliza K-Nearest Neighbors para una tarea de regresión (predecir un valor numérico continuo) en lugar de clasificación, ¿cómo determina el algoritmo el valor de salida para una nueva instancia?",
+    "options": [
+      {
+        "text": "a. Realiza una \"votación\" y asigna el valor numérico más frecuente (moda) entre los vecinos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Asigna el valor del vecino más cercano individual (K=1) ignorando el resto de K vecinos.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Falso. Eso sería solo si K=1 explícitamente."
+      },
+      {
+        "text": "c. Calcula el centroide geométrico de los vecinos y devuelve su distancia.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Calcula el promedio aritmético de los valores objetivo de los K vecinos más cercanos.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "En regresión, KNN calcula el promedio (o promedio ponderado) de los valores objetivo de los K vecinos más cercanos. No usa \"moda\" ni voto mayoritario.",
+    "rightAnswer": "A resposta correcta é: Calcula el promedio aritmético de los valores objetivo de los K vecinos más cercanos.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 14,
+    "status": "correct",
+    "question": "En un modelo, usas una función de pérdida durante entrenamiento y una métrica para evaluación. ¿Cuál es la distinción conceptual más relevante?",
+    "options": [
+      {
+        "text": "a. Es un error que confundirá la interpretación de la calidad del modelo. La métrica siempre debe ser igual a la pérdida.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La pérdida suele ser optimizable, mientras la métrica mide desempeño y puede ser más interpretable.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Esa es una distinción habitual."
+      },
+      {
+        "text": "c. La pérdida se calcula en test; la métrica solo en entrenamiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. La métrica es para optimizar y la pérdida solo para reportar.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "La pérdida se optimiza (a menudo requiere suavidad/diferenciabilidad); la métrica refleja el objetivo y puede no ser optimizable directamente.",
+    "rightAnswer": "A resposta correcta é:La pérdida suele ser optimizable, mientras la métrica mide desempeño y puede ser más interpretable.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 15,
+    "status": "correct",
+    "question": "Los histogramas de las variables T3, TT4 y FTI (marcadores de función tiroidea) en un problema de predicción de enfermedades de tiroides muestran distribuciones aproximadamente normales (campana de Gauss) . ¿Por qué es esperado este patrón en datos médicos como estos?",
+    "options": [
+      {
+        "text": "a. Indica que estas variables no tienen utilidad predictiva.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Indica que los datos fueron artificialmente manipulados para parecer normales.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Es esperado para métricas biológicas en población mayormente sana; valores alejados de la media típicamente indican patología.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. El \"normal\" biológico corresponde aproximadamente a la distribución normal estadística."
+      },
+      {
+        "text": "d. Significa que hay un error porque los datos de los pacientes con enfermedades no tienden a ser normales.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Las distribuciones aproximadamente normales sonesperadas para métricas biológicas en poblaciones principalmente sanas. En un dataset donde ~90% son casos \"negativos\" (sin enfermedad), la mayoría de pacientes tienen valores cercanos al promedio poblacional saludable. Valores extremos son infrecuentes y típicamente indican patología (hipotiroidismo o hipertiroidismo). Esto es la base del diagnóstico médico: valores que se desvían significativamente de la \"normalidad\" poblacional son señales de alerta. Los outliers visibles en el histograma pueden representar casos patológicos legítimos.",
+    "rightAnswer": "A resposta correcta é:Es esperado para métricas biológicas en población mayormente sana; valores alejados de la media típicamente indican patología.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 16,
+    "status": "notanswered",
+    "question": "¿Cómo funciona regresión logística y qué tipo de problemas resuelve?",
+    "options": [
+      {
+        "text": "a. Regresión para variables continuas que aplica transformación logarítmica al target antes de ajustar el modelo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Técnica de dimensionalidad que proyecta datos en un espacio donde las clases son linealmente separables",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Clasificación binaria que aplica función sigmoide a combinación lineal para obtener probabilidades (0-1).",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Modelo que predice el logaritmo del target y requiere transformación inversa para obtener predicciones",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Regresión Logísticaes un modelo declasificación binaria(extensible a multiclase). Combina regresión lineal con lafunción sigmoide: σ(z) = 1/(1+e^(-z)), donde z = β₀ + β₁X₁ + .... Esto transforma cualquier valor real en unaprobabilidad entre 0 y 1. El modelo predice P(y=1|X) y se optimiza minimizandocross-entropy loss(log loss). El umbral típico para clasificar es 0.5, pero puede ajustarse.",
+    "rightAnswer": "A resposta correcta é:Clasificación binaria que aplica función sigmoide a combinación lineal para obtener probabilidades (0-1).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 17,
+    "status": "incorrect",
+    "question": "La clasificación tiene diferentes variantes según el número y tipo de etiquetas. ¿Cuál es la diferencia entre clasificación binaria , multiclase y multietiqueta ?",
+    "options": [
+      {
+        "text": "a. Binaria solo funciona con datos balanceados, multiclase tolera cierto desbalance, y multietiqueta está diseñada específicamente para datos muy desbalanceados",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Binaria tiene alta precisión pero baja cobertura, multiclase equilibra ambas, y multietiqueta maximiza cobertura sacrificando precisión",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Binaria tiene dos clases excluyentes; multiclase tiene más de dos clases excluyentes; multietiqueta permite asignar múltiples etiquetas simultáneas a una instancia",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Binaria tiene dos clases excluyentes; multiclase permite asignar varias clases a cada muestra; multietiqueta indica que existen más de dos posibles etiquetas.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto."
+      }
+    ],
+    "feedback": "Los tres tipos de clasificación se distinguen por el número de clases posibles y si pueden coexistir:Binaria: la salida tiene exactamente dos clases mutuamente excluyentes (spam/no spam, positivo/negativo).Multiclase: la salida tiene más de dos clases mutuamente excluyentes (dígitos 0-9, tipos de animales).Multietiqueta: una instancia puede tener múltiples etiquetas simultáneamente (etiquetar música con múltiples géneros a la vez).",
+    "rightAnswer": "A resposta correcta é: Binaria tiene dos clases excluyentes; multiclase tiene más de dos clases excluyentes; multietiqueta permite asignar múltiples etiquetas simultáneas a una instancia",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 18,
+    "status": "correct",
+    "question": "¿Qué técnica o algoritmo se utiliza comúnmente para reducir la dimensionalidad de un conjunto de datos?",
+    "options": [
+      {
+        "text": "a. K-Means",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Normalizador",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Análisis de Componentes Principales (PCA)",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto."
+      },
+      {
+        "text": "d. Bagging",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "ElAnálisis de Componentes Principales (PCA)es la técnica de reducción de dimensionalidad lineal más conocida. Proyecta los datos en componentes ortogonales que capturan la máxima varianza.",
+    "rightAnswer": "A resposta correcta é:Análisis de Componentes Principales (PCA)",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 19,
+    "status": "notanswered",
+    "question": "¿Qué acción específica constituye \"Model Selection Leakage\" (fuga de selección de modelo)?",
+    "options": [
+      {
+        "text": "a. Usar el conjunto de test para comparar múltiples modelos o ajustar hiperparámetros.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Incluir la variable objetivo en las features de entrenamiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Normalizar los datos antes de dividir en train y test.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Usar validación cruzada sobre el conjunto de entrenamiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "ElModel Selection Leakageocurre cuando se usa el conjunto de test para comparar modelos o ajustar hiperparámetros. Al hacer esto, las decisiones de modelado se \"contaminan\" con información del test set, sesgando las métricas de evaluación final. El test set debe reservarse EXCLUSIVAMENTE para la evaluación final única. Para selección de modelos e hiperparámetros, usar validación cruzada sobre el training set.",
+    "rightAnswer": "A resposta correcta é:Usar el conjunto de test para comparar múltiples modelos o ajustar hiperparámetros.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 20,
+    "status": "correct",
+    "question": "¿Qué mide exactamente la métrica de Accuracy (Exactitud) en un modelo de clasificación?",
+    "options": [
+      {
+        "text": "a. La cantidad de verdaderos positivos dividida entre todos los positivos reales.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La media armónica entre la precisión y el recall.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. La proporción de predicciones correctas sobre el total de predicciones realizadas.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. (TP+TN) / (TP+TN+FP+FN)."
+      },
+      {
+        "text": "d. La proporción de predicciones positivas correctas sobre todas las predicciones positivas.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El Accuracy es la proporción total de predicciones correctas (tanto positivas como negativas) sobre el total de casos evaluados. Fórmula: (TP + TN) / Total. Es útil cuando las clases están balanceadas, pero engañosa si existe desbalance severo.",
+    "rightAnswer": "A resposta correcta é: La proporción de predicciones correctas sobre el total de predicciones realizadas.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 21,
+    "status": "incorrect",
+    "question": "En la construcción de un Pipeline de scikit-learn, ¿qué requisito técnico deben cumplir obligatoriamente todos los pasos intermedios (todos excepto el último)?",
+    "options": [
+      {
+        "text": "a. Deben ser exclusivamente métodos de escalado numérico (como StandardScaler ).",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Pueden ser cualquier transformador, incluyendo imputadores o codificadores, no solo escaladores."
+      },
+      {
+        "text": "b. Deben ser estimadores finales (implementar solo predict ) para generar salidas intermedias.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Deben ser transformadores (implementar fit y transform ) para pasar la salida modificada al siguiente paso.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Deben implementar fit_predict para clasificar los datos antes del paso final.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "En un Pipeline, los datos fluyen secuencialmente. Cada paso intermedio debe transformar los datos para el siguiente, por lo que deben implementar los métodosfitytransform. El último paso puede ser simplemente un estimador (solofit).",
+    "rightAnswer": "A resposta correcta é: Deben ser transformadores (implementarfitytransform) para pasar la salida modificada al siguiente paso.",
+    "hasCorrectMarked": false
+  },
+  {
+    "num": 22,
+    "status": "notanswered",
+    "question": "Para predecir la demora de vuelos, se dispone de horarios programados y reales. ¿Qué tipo de abordaje es más adecuado?",
+    "options": [
+      {
+        "text": "a. Detección de anomalías",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Regresión seguida de post-procesamiento",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Clasificación binaria",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Clasificación multiclase",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Abordarlo comoRegresión seguida de post-procesamientopreserva más información. Al predecir los minutos exactos, sabemos no solo SI llegará tarde, sino CUAN tarde. Si necesitamos clasificar, siempre podemos aplicar un umbral (ej. >15 min) sobre la salida de la regresión, pero no podemos recuperar los minutos exactos desde una simple clasificación binaria.",
+    "rightAnswer": "A resposta correcta é:Regresión seguida de post-procesamiento",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 23,
+    "status": "incorrect",
+    "question": "La matriz de confusión resume el rendimiento de un clasificador. Para clasificación binaria, ¿cuáles son los cuatro componentes de la matriz de confusión?",
+    "options": [
+      {
+        "text": "a. TP (predicho +, real +), TN (predicho -, real -), FP (predicho +, real -), FN (predicho -, real +); base para calcular todas las métricas",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Sensitivity, Specificity, PPV, NPV: métricas médicas equivalentes a los componentes de la matriz",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Training error, validation error, test error, generalization error: componentes del análisis de error",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Precision, Recall, Accuracy, F1: las cuatro métricas principales mostradas en forma de matriz",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Esas son métricas DERIVADAS de la matriz de confusión, no los componentes de la matriz misma (TP, TN, FP, FN)."
+      }
+    ],
+    "feedback": "La matriz de confusión 2×2 tiene:True Positives (TP): predicho positivo, realmente positivo.True Negatives (TN): predicho negativo, realmente negativo.False Positives (FP): predicho positivo, realmente negativo (error Tipo I).False Negatives (FN): predicho negativo, realmente positivo (error Tipo II). De estos cuatro números se derivan todas las métricas: Accuracy=(TP+TN)/total, Precision=TP/(TP+FP), Recall=TP/(TP+FN), etc.",
+    "rightAnswer": "A resposta correcta é: TP (predicho +, real +), TN (predicho -, real -), FP (predicho +, real -), FN (predicho -, real +); base para calcular todas las métricas",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 24,
+    "status": "correct",
+    "question": "En un sistema de filtrado de spam (donde Positivo = Spam), se decide priorizar una alta precisión . ¿Qué consecuencia práctica tiene esto?",
+    "options": [
+      {
+        "text": "a. El sistema tendrá un Accuracy perfecto.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Se evita enviar correos legítimos a la carpeta de spam, pero veremos más spam en la bandeja de entrada.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Se minimizan los Falsos Positivos a costa de aumentar Falsos Negativos (spam no detectado)."
+      },
+      {
+        "text": "c. El sistema detectará absolutamente todo el spam existente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Se bloquearán por error muchos correos legítimos importantes.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Priorizar la precisión en un filtro de spam significa que queremos minimizar el riesgo de marcar un correo legítimo como spam (Falso Positivo), porque perder un correo importante es grave. La consecuencia es que seremos más tolerantes con el spam, dejando pasar algunos correos no deseados a la bandeja de entrada (Falsos Negativos).",
+    "rightAnswer": "A resposta correcta é: Se evita enviar correos legítimos a la carpeta de spam, pero veremos más spam en la bandeja de entrada.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 25,
+    "status": "notanswered",
+    "question": "¿Cuál es la diferencia fundamental en cómo se construyen los árboles en Random Forest (Bagging) versus XGBoost (Boosting)?",
+    "options": [
+      {
+        "text": "a. Random Forest usa árboles más profundos que XGBoost para capturar más complejidad.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Random Forest construye árboles con el dataset completo, mientras que Boosting usa solo un subconjunto de características.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Random Forest construye árboles independientes en paralelo, mientras que Boosting construye árboles secuencialmente donde cada árbol corrige los errores de los anteriores.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Random Forest optimiza una función de pérdida vía descenso de gradiente, mientras que Boosting usa voto mayoritario.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Random Forest (Bagging) construye múltiples árboles independientes en paralelo (cada uno ve una muestra ligeramente distinta), y promedia sus resultados para reducir varianza. Boosting (XGBoost) construye árboles secuencialmente, donde cada nuevo árbol intenta corregir los errores residuales de la combinación de los árboles anteriores.",
+    "rightAnswer": "A resposta correcta é: Random Forest construye árboles independientes en paralelo, mientras que Boosting construye árboles secuencialmente donde cada árbol corrige los errores de los anteriores.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 26,
+    "status": "incorrect",
+    "question": "Una ciudad implementa un sistema inteligente que ajusta en tiempo real los semáforos para optimizar el flujo de tráfico, basándose en indicadores numéricos de congestión. Este sistema aprende a tomar decisiones óptimas (cambiar luz) a través de la interacción continua con el entorno aprendiendo a reducir la congestión. ¿Qué enfoque de aprendizaje se utiliza?",
+    "options": [
+      {
+        "text": "a. Clustering",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Aprendizaje por Refuerzo (Reinforcement Learning)",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Regresión Supervisada",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto."
+      },
+      {
+        "text": "d. Clasificación Supervisada",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El sistema aprende interactuando (prueba y error) con un entorno dinámico para maximizar una señal de recompensa acumulada. Esto es la definición deAprendizaje por Refuerzo (Reinforcement Learning).",
+    "rightAnswer": "A resposta correcta é:Aprendizaje por Refuerzo (Reinforcement Learning)",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 27,
+    "status": "incorrect",
+    "question": "¿Qué afirmación resume mejor el trade-off entre normalización min-max y estandarización Z-score respecto a outliers?",
+    "options": [
+      {
+        "text": "a. Min-max puede distorsionarse mucho por un outlier.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Min-max elimina outliers al mapearlos a 0 o 1.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Z-score es completamente inmune a outliers.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Z-score solo se aplica si los datos están en [0,1].",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Eso confunde con min-max."
+      }
+    ],
+    "feedback": "Min-max es muy sensible a outliers porque fija rango con mínimos/máximos; Z-score usa media/desviación (también afectables), pero el “aplastamiento” por extremos es especialmente directo en min-max.",
+    "rightAnswer": "A resposta correcta é:Min-max puede distorsionarse mucho por un outlier.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 28,
+    "status": "notanswered",
+    "question": "Considere dos acciones de preprocesamiento: Ajustar (fit) un StandardScaler en todo el conjunto de datos (Train + Test) antes de dividir. Reemplazar valores de \"Age > 150\" con NaN en todo el conjunto de datos antes de dividir. ¿Qué afirmación evalúa correctamente el Data Leakage?",
+    "options": [
+      {
+        "text": "a. La acción 1 causa Data Leakage porque usa la distribución del test set. La acción 2 no causa leakage significativo porque usa conocimiento del dominio (reglas externas), no estadísticas de los datos.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La acción 1 es segura porque el escalado es una transformación lineal reversible. La acción 2 es leakage porque altera los datos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Ambas acciones causan Data Leakage y deben esperar estrictamente a después de la división.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Ambas son seguras si usamos validación cruzada.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "La Acción 1 causa Data Leakage porque las estadísticas (media, desviación) se calculan usando información del Test set. La Acción 2 es segura porque se basa en conocimiento del dominio (una regla fija: edad biológica máxima) que es independiente de la distribución de los datos muestreados. Limpiar errores de datos basándose en reglas externas universales antes del split es aceptable.",
+    "rightAnswer": "A resposta correcta é:La acción 1 causa Data Leakage porque usa la distribución del test set. La acción 2 no causa leakage significativo porque usa conocimiento del dominio (reglas externas), no estadísticas de los datos.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 29,
+    "status": "incorrect",
+    "question": "Durante el entrenamiento de Q-Learning, epsilon (ε) típicamente decrece. ¿Por qué es importante decaer epsilon durante el entrenamiento?",
+    "options": [
+      {
+        "text": "a. Reduce progresivamente el learning rate para obtener convergencia más estable hacia el final del entrenamiento",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Eso sería learning rate scheduling. Epsilon decay reduce exploración aleatoria, no la magnitud de las actualizaciones de Q-values."
+      },
+      {
+        "text": "b. Aumenta la exploración conforme avanza el entrenamiento para escapar de mínimos locales en la Q-Table",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Permite transicionar de mucha exploración inicial para descubrir el entorno, a más explotación posterior para usar el conocimiento aprendido",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Compensa el crecimiento de los Q-values para mantenerlos en un rango numérico estable",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Elepsilon decaypermite transicionar deexploración inicialaexplotación posterior. Al inicio (ε ≈ 1), el agente explora mucho para descubrir el entorno. Conforme aprende, ε decrece (hacia un mínimo como 0.01), y el agente explota más su conocimiento. Esto asegura que: (1) El agente no se atasque en políticas subóptimas tempranas. (2) El agente use su conocimiento aprendido en lugar de actuar aleatoriamente. (3) Mantiene algo de exploración (ε_min > 0) para adaptarse a cambios.",
+    "rightAnswer": "A resposta correcta é:Permite transicionar de mucha exploración inicial para descubrir el entorno, a más explotación posterior para usar el conocimiento aprendido",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 30,
+    "status": "notanswered",
+    "question": "One-hot encoding crea una columna binaria por categoría. ¿Qué trade-off importante aparece cuando una variable tiene muchísimas categorías o categorías raras?",
+    "options": [
+      {
+        "text": "a. Hace que un modelo lineal se vuelva no lineal automáticamente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Impide manejar categorías desconocidas en producción.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Crece la dimensionalidad, lo que puede ralentizar y empeorar señal/ruido en categorías raras.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Obliga a que las categorías tengan un orden natural.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "One-hot puede disparar el número de columnas, ralentizar entrenamiento y generar columnas con muy poca señal (categorías raras).",
+    "rightAnswer": "A resposta correcta é: Crece la dimensionalidad, lo que puede ralentizar y empeorar señal/ruido en categorías raras.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 31,
+    "status": "correct",
+    "question": "¿Qué tipo de predictor se utiliza para asignar etiquetas categóricas/discretas a datos de entrada?",
+    "options": [
+      {
+        "text": "a. Normalizador",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Clasificador",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto."
+      },
+      {
+        "text": "c. Clusterizador",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Reductor de dimensionalidad",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "UnClasificadores un algoritmo de aprendizaje supervisado diseñado para predecir categorías o clases discretas (ej. Spam/No Spam, Perro/Gato). Esto contrasta con un Regresor, que predice valores continuos.",
+    "rightAnswer": "A resposta correcta é:Clasificador",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 32,
+    "status": "notanswered",
+    "question": "¿Cuál es el propósito de seleccionar aleatoriamente un subconjunto de características en cada división (split) del árbol?",
+    "options": [
+      {
+        "text": "a. Reducir el tiempo de entrenamiento drásticamente",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Manejar automáticamente los valores faltantes",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Asegurar que los árboles sean diferentes entre sí (aumentar la diversidad)",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Hacer que cada árbol se enfoque solo en la característica más importante",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "",
+    "rightAnswer": "A resposta correcta é: Asegurar que los árboles sean diferentes entre sí (aumentar la diversidad)",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 33,
+    "status": "incorrect",
+    "question": "Durante el Análisis Exploratorio de Datos (EDA), ¿cuál es el propósito principal de visualizar histogramas de las variables numéricas?",
+    "options": [
+      {
+        "text": "a. Distinguir errores de datos legítimos; definir métricas apropiadas.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Identificar el modelo que se debe utilizar en función de las distibuciones y características de los datos.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Principalmente definie el preprocesamiento."
+      },
+      {
+        "text": "c. Entender las distribuciones, errores o valores faltantes para justificar decisiones de preprocesamiento.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Establecer el baseline del modelo en función de la distribución de los datos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Los histogramas en EDA sirven para: (1)Identificar la distribuciónde cada variable (normal, sesgada, bimodal). (2)Detectar outliersy valores extremos. (3)Encontrar errores de datos(valores imposibles). (4)Identificar valores faltantes(variables con pocos conteos). (5)Informar decisiones de preprocesamiento: ¿necesita transformación log? ¿hay outliers que tratar? ¿la variable tiene utilidad? (6)Entender el rango y escalade cada variable. Todo esto guía las decisiones de limpieza y preprocesamiento antes de construir modelos.",
+    "rightAnswer": "A resposta correcta é:Entender las distribuciones, errores o valores faltantes para justificar decisiones de preprocesamiento.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 34,
+    "status": "notanswered",
+    "question": "¿Cuál es la principal desventaja conceptual de la normalización Min-Max comparada con la estandarización (Z-score)?",
+    "options": [
+      {
+        "text": "a. No mantiene la forma de la distribución de los datos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Es muy sensible a valores atípicos (*outliers*)",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Asume que los datos siguen una distribución Normal (Gaussiana)",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Es computacionalmente más costoso que la estandarización",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Min-Max escala linealmente usando los valores mínimo y máximo. Si existe un outlier extremo, el rango se \"estira\" para incluirlo, comprimiendo la gran mayoría de datos normales en un intervalo diminuto, perdiendo resolución y afectando el aprendizaje.",
+    "rightAnswer": "A resposta correcta é: Es muy sensible a valores atípicos (*outliers*)",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 35,
+    "status": "correct",
+    "question": "En el contexto de la librería scikit-learn , ¿cuál es la función esencial de la clase Pipeline ?",
+    "options": [
+      {
+        "text": "a. Encapsular una serie de pasos de transformación y un estimador final para automatizar y asegurar la corrección del flujo de datos.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto."
+      },
+      {
+        "text": "b. Garantizar la ejecución paralela de múltiples modelos para mejorar la eficiencia del procesamiento de datos en GPU.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Orquestar la recolección y limpieza de datos de forma autónoma.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Integrar métodos de validación y selección de características en un solo objeto para visualización gráfica.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El objetoPipelinepermite encapsular secuencialmente una serie de transformadores de preprocesamiento y un estimador final. Esto simplifica el código, asegura que las transformaciones se apliquen consistentemente en entrenamiento y test, y crucialmente, ayuda a evitar elData Leakagedurante la validación cruzada.",
+    "rightAnswer": "A resposta correcta é: Encapsular una serie de pasos de transformación y un estimador final para automatizar y asegurar la corrección del flujo de datos.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 36,
+    "status": "correct",
+    "question": "En un sistema de videovigilancia para detectar ladrones, se decide configurar el modelo para tener una muy alta exhaustividad (Recall) , aunque esto sacrifique la precisión. ¿Qué comportamiento observaremos en el sistema?",
+    "options": [
+      {
+        "text": "a. El sistema detectará casi todos los ladrones reales, pero generará muchas falsas alarmas (detectará inocentes como ladrones).",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Maximiza TP, aumenta FP."
+      },
+      {
+        "text": "b. El sistema tendrá una Accuracy del 100%.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El sistema detectará únicamente a los ladrones cuando esté 100% seguro, ignorando casos dudosos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El sistema tendrá muy pocos falsos positivos y muy pocos falsos negativos simultáneamente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Alta exhaustividad (Recall) significa que el sistema intenta encontrartodoslos casos positivos (ladrones) a toda costa. La consecuencia directa es que será más \"paranoico\" y generará más falsas alarmas (Falsos Positivos), es decir, detectará a personas inocentes como ladrones con tal de no dejar escapar a ningún ladrón real.",
+    "rightAnswer": "A resposta correcta é: El sistema detectará casi todos los ladrones reales, pero generará muchas falsas alarmas (detectará inocentes como ladrones).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 37,
+    "status": "incorrect",
+    "question": "Si se tienen imágenes de dígitos escritos a mano sin saber a priori qué número representa cada imagen y se desea agruparlas automáticamente en 10 categorías basadas en similitud visual, ¿qué enfoque es el adecuado?",
+    "options": [
+      {
+        "text": "a. Clustering (Agrupamiento no supervisado).",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Regresión supervisada.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Requiere valores objetivo continuos."
+      },
+      {
+        "text": "c. Aprendizaje reforzado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Clasificación supervisada.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Al no tener etiquetas, no podemos usar métodos supervisados (Clasificación/Regresión). Queremos encontrar estructura (grupos) en los datos, por lo que el enfoque correcto esClustering(Agrupamiento), una técnica de aprendizaje no supervisado.",
+    "rightAnswer": "A resposta correcta é: Clustering (Agrupamiento no supervisado).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 38,
+    "status": "notanswered",
+    "question": "En el contexto del diseño de Scikit-learn, ¿qué capacidad específica distingue a un Transformer de un Estimator genérico?",
+    "options": [
+      {
+        "text": "a. Un Transformer se usa estrictamente para arquitecturas de redes neuronales de deep learning.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Un Transformer solo puede usarse en el último paso de un Pipeline para hacer predicciones.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Un Transformer es un estimador que no aprende ningún parámetro de los datos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Un Transformer implementa un método transform() para modificar los datos (ej. escalado, encoding) tras aprender parámetros con fit() .",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "UnTransformeres un tipo especial de Estimator que, además del métodofit()común a todos los estimadores, implementa un métodotransform(). Este método permite modificar los datos de entrada (por ejemplo, escalándolos o codificándolos) utilizando los parámetros aprendidos durante elfit(). La combinaciónfit_transform()es un atajo común. Los Transformers son los bloques intermedios fundamentales de cualquier Pipeline de preprocesamiento.",
+    "rightAnswer": "A resposta correcta é: Un Transformer implementa un métodotransform()para modificar los datos (ej. escalado, encoding) tras aprender parámetros confit().",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 39,
+    "status": "incorrect",
+    "question": "La detección de anomalías es una tarea importante de aprendizaje no supervisado. ¿Cuál es el objetivo de la detección de anomalías y cuáles son sus aplicaciones típicas?",
+    "options": [
+      {
+        "text": "a. Identificar puntos de datos inusuales que se desvían significativamente de la norma; aplicaciones incluyen detección de fraude, monitorización de sistemas y seguridad",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Clasificar transacciones como fraudulentas o legítimas usando un modelo entrenado con ejemplos etiquetados de ambas clases.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Eso sería clasificación supervisada. La detección de anomalías (no supervisada) identifica datos atípicos sin necesidad de ejemplos etiquetados de fraude."
+      },
+      {
+        "text": "c. Predecir cuándo un sistema fallará en el futuro basándose en datos históricos de fallos anteriores",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Validar la integridad de datos importados de fuentes externas verificando que cumplan reglas de negocio predefinidas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Detección de anomalíasse enfoca en identificar puntos de datos o patrones inusuales que se desvían significativamente de la norma. Se utiliza en:detección de fraude(transacciones bancarias sospechosas),monitorización de sistemas(detectar fallos en servidores), yseguridad(identificar intrusiones en redes). Las anomalías pueden indicar errores, ataques o simplemente datos que merecen atención especial.",
+    "rightAnswer": "A resposta correcta é: Identificar puntos de datos inusuales que se desvían significativamente de la norma; aplicaciones incluyen detección de fraude, monitorización de sistemas y seguridad",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 40,
+    "status": "correct",
+    "question": "¿Qué afirmación captura mejor cómo evitar fuga de datos al usar un conjunto de test?",
+    "options": [
+      {
+        "text": "a. El test puede guiar la selección de modelo si se mantiene fijo y no se remuestrea.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El test solo debe ser más grande que el train para evitar varianza.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El test puede usarse para ajustar hiperparámetros si el ajuste es pequeño.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El test debe simular datos no vistos; cualquier flujo de información desde test invalida la estimación.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. El test solo se usa para una evaluación final, sin retroalimentar decisiones."
+      }
+    ],
+    "feedback": "El conjunto de test debe comportarse como datos realmente no vistos: no debe influir en transformaciones, selección de modelo o ajuste de hiperparámetros.",
+    "rightAnswer": "A resposta correcta é: El test debe simular datos no vistos; cualquier flujo de información desde test invalida la estimación.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 41,
+    "status": "notanswered",
+    "question": "Si observamos una fuerte correlación lineal entre dos variables en nuestros datos:",
+    "options": [
+      {
+        "text": "a. Significa que el error del modelo será cero.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Podemos modelar su relación matemática, pero la correlación no prueba causalidad por sí misma.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Significa definitivamente que la variable independiente causa cambios en la dependiente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. No podemos usar regresión lineal si no hay prueba de causalidad.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "La correlación indica asociación lineal, pero no implica necesariamente que una variable cause la otra. Se requiere conocimiento del dominio para justificar suposiciones causales.",
+    "rightAnswer": "A resposta correcta é: Podemos modelar su relación matemática, pero la correlación no prueba causalidad por sí misma.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 42,
+    "status": "incorrect",
+    "question": "K-Nearest Neighbors (KNN) se clasifica como un algoritmo de \"Lazy Learning\" (aprendizaje perezoso). ¿Qué implicación directa tiene esto en términos de recursos computacionales?",
+    "options": [
+      {
+        "text": "a. Es \"perezoso\" porque solo utiliza una pequeña fracción aleatoria de los datos para predecir, ignorando el resto.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El tiempo de \"entrenamiento\" es casi nulo (solo almacenamiento), pero el tiempo de predicción es alto y crece con el tamaño del dataset, requiriendo mucha memoria RAM.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Requiere re-entrenamiento completo cada vez que se quiere hacer una nueva predicción.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. No hay \"re-entrenamiento\", solo consulta."
+      },
+      {
+        "text": "d. Consume muy poca memoria RAM porque resume los datos en unos pocos parámetros (medias y varianzas).",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Al no construir un modelo interno (fórmulas, coeficientes) durante el entrenamiento, KNN traslada todo el coste computacional al momento de la predicción, donde debe consultar todo el dataset.",
+    "rightAnswer": "A resposta correcta é: El tiempo de \"entrenamiento\" es casi nulo (solo almacenamiento), pero el tiempo de predicción es alto y crece con el tamaño del dataset, requiriendo mucha memoria RAM.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 43,
+    "status": "correct",
+    "question": "La regresión lineal es uno de los modelos más fundamentales de ML. ¿Cuál es el supuesto básico de la regresión lineal y qué optimiza durante el entrenamiento?",
+    "options": [
+      {
+        "text": "a. Asume relación lineal y = β₀ + β₁X₁ + ... y minimiza MSE (Mean Squared Error) entre predicciones y valores reales.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. OLS encuentra los coeficientes que minimizan la suma de errores cuadráticos, produciendo la \"mejor línea\" para los datos."
+      },
+      {
+        "text": "b. Promedia los residuos de los vecinos más cercanos ponderados por distancia",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Asume relación exponencial y busca maximizar la correlación entre variables usando gradient descent",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Encuentra el hiperplano que maximiza el margen entre clases positivas y negativas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Regresión Linealasume una relación lineal entre las features (X) y el target (y): y = β₀ + β₁X₁ + β₂X₂ + ... + ε. Durante el entrenamiento, minimiza elMean Squared Error (MSE)entre predicciones y valores reales: Σ(yᵢ - ŷᵢ)² / n. El método deOrdinary Least Squares (OLS)encuentra los coeficientes β que minimizan este error. Es eficiente, interpretable, pero asume linealidad y es sensible a outliers.",
+    "rightAnswer": "A resposta correcta é:Asume relación lineal y = β₀ + β₁X₁ + ... y minimiza MSE (Mean Squared Error) entre predicciones y valores reales.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 44,
+    "status": "correct",
+    "question": "¿Cuál es el propósito principal de dividir los datos en conjuntos de entrenamiento (train) y prueba (test) ?",
+    "options": [
+      {
+        "text": "a. Para evitar sobreajustar el modelo a los datos de entrenamiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Para reducir la complejidad computacional durante la fase de validación.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Para evitar el \"Data Leakage\" (fuga de datos), asegurando que el modelo y los transformadores tengan en cuenta la información estadística (media, desviación) del conjunto de prueba.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Evaluar la capacidad de generalización del modelo a datos no vistos y detectar overfitting",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Es la forma de verificar que el modelo funciona con datos nuevos, no solo los de entrenamiento."
+      }
+    ],
+    "feedback": "La división train-test sirve paraevaluar la capacidad de generalizacióndel modelo a datos no vistos. El modelo se entrena SOLO con datos de train. Luego se evalúa con datos de test que NUNCA vio durante entrenamiento. Si el error en test es mucho mayor que en train, hay overfitting. Estopreviene el sobreajusteal revelar si el modelo realmente aprendió patrones generalizables o solo memorizó el dataset de entrenamiento.",
+    "rightAnswer": "A resposta correcta é: Evaluar la capacidad de generalización del modelo a datos no vistos y detectar overfitting",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 45,
+    "status": "correct",
+    "question": "En NumPy, ¿qué representa el valor np.nan y qué requisito impone al array que lo contiene?",
+    "options": [
+      {
+        "text": "a. Es un valor faltante que limita procesar el array con operaciones matriciales mientras no sea preprocesado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Es un valor desconocido que convierte la matriz a tipo None.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Es equivalente al None de Python y convierte el array al tipo object.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Representa un valor faltante (\"Not a Number\") y obliga a que el array sea de tipo flotante (float).",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Los enteros no tienen representación de NaN."
+      }
+    ],
+    "feedback": "np.nan(Not a Number) representa un valor numérico faltante o indefinido. Al ser un valor de punto flotante especial (IEEE 754), cualquier array que contengaNaNdebe ser necesariamente de tipofloat(no puede ser entero).",
+    "rightAnswer": "A resposta correcta é: Representa un valor faltante (\"Not a Number\") y obliga a que el array sea de tipo flotante (float).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 46,
+    "status": "notanswered",
+    "question": "Una vez entrenado, ¿cómo se deriva la política óptima a partir de la Q-Table aprendida?",
+    "options": [
+      {
+        "text": "a. Elegir acciones proporcionalmente a sus Q-values usando softmax como distribución de probabilidad",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Calcular el gradiente de la Q-Table y seguir la dirección de máximo aumento de recompensa",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Promediar los Q-values de acciones similares para suavizar la política y reducir varianza",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Para cada estado, elegir la acción con mayor Q-value.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Lapolítica óptimase deriva de la Q-Table de forma sencilla: para cada estado s, la acción óptima es aquella con elmayor Q-value: π(s) = argmax_a Q(s, a). Es decir, el agente mira los Q-values de todas las acciones posibles en su estado actual y elige la que tiene el valor más alto. Durante la evaluación (deployment), se usa ε=0 para seguir la política pura sin exploración. La Q-Table visualizada como flechas muestra la dirección óptima desde cada estado.",
+    "rightAnswer": "A resposta correcta é:Para cada estado, elegir la acción con mayor Q-value.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 47,
+    "status": "incorrect",
+    "question": "Una inmobiliaria dispone de datos de 200.000 viviendas vendidas incluyendo: metros cuadrados, habitaciones, categoría (piso/casa/adosado), código postal, valor catastral, año de construcción y precio de venta. Quieren predecir el precio de futuras viviendas. ¿Cuál es el planteamiento correcto del problema?",
+    "options": [
+      {
+        "text": "a. Aprendizaje por refuerzo donde el agente aprende ajustando precios según la respuesta del mercado inmobiliario",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Aprendizaje supervisado de clasificación, categorizando las viviendas en rangos de precio (bajo, medio, alto, premium)",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Aprendizaje no supervisado con clustering para agrupar viviendas similares y asignar precios según el grupo",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Tenemos el precio real de cada vivienda; no necesitamos descubrir grupos, sino predecir valores."
+      },
+      {
+        "text": "d. Aprendizaje supervisado de regresión, ya que el precio es un valor numérico continuo disponible en los datos de entrenamiento",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El precio es un valor numérico continuo que queremos predecir a partir de otras características. Esto define un problema de regresión supervisada.",
+    "rightAnswer": "A resposta correcta é: Aprendizaje supervisado de regresión, ya que el precio es un valor numérico continuo disponible en los datos de entrenamiento",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 48,
+    "status": "correct",
+    "question": "En un sistema de detección de vídeos seguros para niños, se decide priorizar una muy alta precisión (Precision) sobre la exhaustividad (Recall). ¿Cuál es la implicación principal de esta decisión?",
+    "options": [
+      {
+        "text": "a. El Recall será también muy alto.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El sistema dejará pasar algunos vídeos inapropiados, pero detectará casi todos los seguros.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El sistema descartará (clasificará como no-seguros) muchos vídeos que en realidad eran seguros, para garantizar la pureza de los positivos.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Aumenta FN para minimizar FP (donde positivo = seguro)."
+      },
+      {
+        "text": "d. El sistema tendrá una tasa alta de falsos positivos (vídeos inapropiados marcados como seguros).",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Priorizar la precisión significa que cuando el sistema dice \"Es seguro\", queremos estar absolutamente seguros de que es verdad. Para lograr esto, el sistema se vuelve muy conservador y solo aprueba lo evidente. La consecuencia es que descartará muchos vídeos que eran seguros (Falsos Negativos), porque no estaba 100% seguro.",
+    "rightAnswer": "A resposta correcta é: El sistema descartará (clasificará como no-seguros) muchos vídeos que en realidad eran seguros, para garantizar la pureza de los positivos.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 49,
+    "status": "correct",
+    "question": "Si dos agentes Minimax perfectos juegan al Tres en Raya uno contra el otro, ¿cuál es el resultado inevitable?",
+    "options": [
+      {
+        "text": "a. Depende de la semilla aleatoria utilizada.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El segundo jugador (O) siempre gana.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El primer jugador (X) siempre gana.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Un Empate.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto."
+      }
+    ],
+    "feedback": "El Tres en Raya es un juego resuelto y es un empate teórico. Si ambos jugadores juegan perfectamente (como hace Minimax), ninguno puede forzar una victoria, resultando inevitablemente en unEmpate.",
+    "rightAnswer": "A resposta correcta é: Un Empate.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 50,
+    "status": "correct",
+    "question": "Se dispone de datos de tráfico de red (IPs, puertos, volumen) sin etiquetas de ataques previos y se desea identificar posibles intrusiones nuevas o comportamientos extraños. ¿Qué enfoque es el más apropiado?",
+    "options": [
+      {
+        "text": "a. Detección de anomalías no supervisada (Anomaly Detection).",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto."
+      },
+      {
+        "text": "b. Clasificación multiclase supervisada.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Aprendizaje por Refuerzo (Reinforcement Learning).",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Clasificación multietiqueta.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Al no tener etiquetas históricas (es decir, no sabemos qué era ataque y qué no), no podemos usar clasificación supervisada. Se requiere un enfoque deDetección de Anomalías no supervisada(ej. Isolation Forest, One-Class SVM) que modele el comportamiento \"normal\" y marque como anomalía lo que se desvíe significativamente.",
+    "rightAnswer": "A resposta correcta é: Detección de anomalías no supervisada (Anomaly Detection).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 51,
+    "status": "notanswered",
+    "question": "¿Cuál es el objetivo de Support Vector Machines (SVM)?",
+    "options": [
+      {
+        "text": "a. Minimiza el error de clasificación sumando errores por cada punto mal clasificado usando gradient descent.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Proyecta datos a un espacio de menor dimensión donde las clases se vuelven separables.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Encuentra hiperplano que maximiza margen entre clases.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Encuentra múltiples vectores de soporte que juntos forman una barrera de clasificación mediante voting.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "SVM lineal busca elhiperplano separador que maximiza el margenentre clases. El margen es la distancia entre el hiperplano y los puntos más cercanos de cada clase. Lossupport vectorsson precisamente esos puntos más cercanos al hiperplano que \"soportan\" la posición del margen óptimo. Solo los support vectors influyen en la posición del hiperplano; otros puntos pueden eliminarse sin cambiar el modelo. Para datos no linealmente separables, se usankernels(RBF, polynomial) que mapean a espacios de mayor dimensión.",
+    "rightAnswer": "A resposta correcta é:Encuentra hiperplano que maximiza margen entre clases.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 52,
+    "status": "correct",
+    "question": "Al usar StandardScaler en un entorno predictivo correcto, ¿cuál es el procedimiento exacto para transformar los conjuntos de entrenamiento (Train) y prueba (Test)?",
+    "options": [
+      {
+        "text": "a. scaler.fit(X_test) para obtener la referencia real y luego scaler.transform(X_train) .",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. scaler.fit(X) (todo el dataset) y luego separar en Train y Test.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. scaler.fit(X_train) , luego scaler.transform(X_train) y scaler.transform(X_test) .",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Aprendemos de Train, aplicamos a todo."
+      },
+      {
+        "text": "d. scaler.fit_transform(X_train) y luego scaler.fit_transform(X_test) .",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Debes hacerfitSOLO en Train para aprender sus estadísticas, y luego usar esos parámetros para hacertransformtanto en Train como en Test. Nunca hacerfiten Test.",
+    "rightAnswer": "A resposta correcta é:scaler.fit(X_train), luegoscaler.transform(X_train)yscaler.transform(X_test).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 53,
+    "status": "notanswered",
+    "question": "¿Qué representa exactamente un valor almacenado en la Q-Table (Q-Value) para un par estado-acción dado?",
+    "options": [
+      {
+        "text": "a. La predicción de la recompensa futura total que se obtendrá al tomar esa acción en ese estado.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La recompensa inmediata que se recibirá en el siguiente paso solamente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El número de veces que el agente ha visitado ese estado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. La probabilidad de que esa acción sea correcta.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El Q-Value (Quality Value) es la predicción de larecompensa futura acumulada(descontada) que el agente espera obtener si toma esa acción específica en ese estado y luego sigue la política óptima.",
+    "rightAnswer": "A resposta correcta é:La predicción de la recompensa futura total que se obtendrá al tomar esa acción en ese estado.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 54,
+    "status": "correct",
+    "question": "Q-Learning utiliza una estructura de datos llamada Q-Table. ¿Qué representa la Q-Table y qué información almacena?",
+    "options": [
+      {
+        "text": "a. Tabla que almacena Q-values para cada par (estado, acción) con la recompensa futura esperada al tomar acción a en estado s siguiendo la política óptima.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. La Q-Table es el \"conocimiento\" del agente sobre qué tan buena es cada acción en cada estado, medido en recompensa futura esperada."
+      },
+      {
+        "text": "b. Tabla de probabilidades de transición entre estados, indicando la probabilidad de llegar a cada estado siguiente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Tabla de recompensas inmediatas para cada estado en función de la acción que se tome, definida por el entorno antes del entrenamiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Tabla que mapea estados a acciones directamente, indicando qué acción tomar en cada estado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "LaQ-Tablees como una \"hoja de trucos\" que el agente construye durante el aprendizaje. AlmacenaQ-valuespara cada par (estado, acción). El Q-value Q(s, a) representa larecompensa futura esperadasi el agente toma la acción a en el estado s y luego sigue la política óptima. Las filas representan estados, las columnas representan acciones, y cada celda contiene el Q-value estimado. Se inicializa típicamente a ceros.",
+    "rightAnswer": "A resposta correcta é:Tabla que almacena Q-values para cada par (estado, acción) con la recompensa futura esperada al tomar acción a en estado s siguiendo la política óptima.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 55,
+    "status": "correct",
+    "question": "Aplicas listwise deletion (borrar filas con algún nulo). ¿Cuál es el principal riesgo metodológico señalado?",
+    "options": [
+      {
+        "text": "a. Garantiza estimadores insesgados en cualquier mecanismo de falta.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Aumentas fuga de datos porque el dataset es más pequeño.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Es idéntico a imputar con la media, lo cual sería un error conceptual en este contexto.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Pierdes información válida de otras columnas y reduces potencia; puede introducir sesgo si no es MCAR.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. El coste es doble: menos datos y sesgo potencial."
+      }
+    ],
+    "feedback": "Borrar filas elimina información válida de otras columnas, reduce potencia y puede sesgar si el mecanismo no es MCAR.",
+    "rightAnswer": "A resposta correcta é: Pierdes información válida de otras columnas y reduces potencia; puede introducir sesgo si no es MCAR.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 56,
+    "status": "incorrect",
+    "question": "¿Qué define correctamente al conjunto de validación ?",
+    "options": [
+      {
+        "text": "a. Es el conjunto de datos final que se entrega al cliente para su validación manual.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Es un subconjunto del conjunto de prueba (Test) utilizado para comparar modelos.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. NUNCA se debe tocar el conjunto de Test. Validación sale del Training original."
+      },
+      {
+        "text": "c. Es un subconjunto disjunto del entrenamiento utilizado para ajustar hiperparámetros y seleccionar modelos.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Es una técnica para poder comprobar la calidad del modelo en todos los datos haciendo divisiones sucesivas.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El conjunto de validación es una partición intermedia: no se usa para el entrenamiento directo (backprop/ajuste de pesos), pero se usa frecuentemente durante el entrenamiento para evaluar el rendimiento y tomar decisiones sobre hiperparámetros y parada temprana (early stopping).",
+    "rightAnswer": "A resposta correcta é: Es un subconjunto disjunto del entrenamiento utilizado para ajustar hiperparámetros y seleccionar modelos.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 57,
+    "status": "correct",
+    "question": "¿Qué efecto tiene limitar la profundidad máxima ( max_depth ) de un Árbol de Decisión?",
+    "options": [
+      {
+        "text": "a. Limita la profundidad del arbol para garantizar que cada nodo final (hoja) tenga una única muestra muestra, buscando un mejor ajuste que puede optimizarse.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Permite suavizar la pendiente de la recta de regresión, evitando overfitting.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Actúa como un regularizador, simplificando el modelo para reducir el overfitting.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto."
+      },
+      {
+        "text": "d. Escala automáticamente las características de entrada para evitar que las ramas en ordenes de magnitud menores eclipsen a las mayores, haciendo que sus features asociadas sean ignoradas aunque puedan tener una mayor correlación con la variable objetivo.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Limitarmax_depthimpide que el árbol crezca indefinidamente para ajustarse a cada ejemplo de entrenamiento. Actúa como unregularizador: reduce la varianza (evita overfitting) al simplificar el modelo, aunque si se limita demasiado puede aumentar el sesgo (underfitting).",
+    "rightAnswer": "A resposta correcta é:Actúa como un regularizador, simplificando el modelo para reducir el overfitting.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 58,
+    "status": "notanswered",
+    "question": "Tienes una variable categórica sin orden semántico (p.ej., tipos de zona). Asignas números 1..K a las categorías y entrenas un modelo basado en distancia. ¿Cuál es el problema conceptual principal?",
+    "options": [
+      {
+        "text": "a. Convierte la variable en MNAR.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Reduce dimensionalidad, por lo que siempre es mejor que one-hot.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Induce una noción falsa de cercanía/similitud entre categorías.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Impide generalizar porque los enteros no son normalizables.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Un encoding ordinal introduce una geometría artificial: hace que categorías “cercanas” numéricamente parezcan más similares, aunque no lo sean.",
+    "rightAnswer": "A resposta correcta é:Induce una noción falsa de cercanía/similitud entre categorías.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 59,
+    "status": "notanswered",
+    "question": "¿Qué es el muestreo bootstrap (bagging) en el contexto de Random Forests?",
+    "options": [
+      {
+        "text": "a. Los datos se dividen equitativamente entre los árboles sin reemplazo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Cada árbol se entrena con un conjunto de datos completamente diferente y sin superposición",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Cada árbol se entrena con una muestra aleatoria de los datos de entrenamiento, extraída con reemplazo",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Todos los árboles se entrenan exactamente con los mismos datos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "",
+    "rightAnswer": "A resposta correcta é: Cada árbol se entrena con una muestra aleatoria de los datos de entrenamiento, extraída con reemplazo",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 60,
+    "status": "correct",
+    "question": "La Q-Table necesita ser inicializada antes del entrenamiento. ¿Cuál es la forma más común de inicializar la Q-Table y por qué?",
+    "options": [
+      {
+        "text": "a. Copiar los Q-values de un agente previamente entrenado en un entorno similar (transfer learning)",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Inicializar con valores aleatorios de una distribución normal para romper simetría entre acciones",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Calcular Q-values iniciales a partir de las recompensas conocidas del entorno usando programación dinámica",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Inicializar todos los Q-values a cero, representando que el agente \"no sabe nada\" al inicio; los valores se actualizan mediante exploración y recompensas",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Ceros es la inicialización más neutral y común, dejando que el aprendizaje determine los valores verdaderos."
+      }
+    ],
+    "feedback": "La forma más común esinicializar todos los Q-values a cero:Q_table = np.zeros((num_states, num_actions)). Esto representa que el agente \"no sabe nada\" al inicio - no tiene preferencia por ninguna acción en ningún estado. Conforme explora y recibe recompensas, los Q-values se actualizan. Una alternativa es inicialización optimista (valores altos) que fomenta exploración temprana, pero ceros es lo más simple y común.",
+    "rightAnswer": "A resposta correcta é: Inicializar todos los Q-values a cero, representando que el agente \"no sabe nada\" al inicio; los valores se actualizan mediante exploración y recompensas",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 61,
+    "status": "incorrect",
+    "question": "¿Cómo realiza predicciones un Random Forest en tareas de clasificación?",
+    "options": [
+      {
+        "text": "a. Promediando las probabilidades numéricas de todos los árboles",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Por votación mayoritaria: gana la clase que recibe más votos de los árboles individuales",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Tomando la mediana de las predicciones de los árboles",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Usando solo la predicción del árbol con mejor rendimiento en entrenamiento",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": ""
+      }
+    ],
+    "feedback": "",
+    "rightAnswer": "A resposta correcta é: Por votación mayoritaria: gana la clase que recibe más votos de los árboles individuales",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 62,
+    "status": "notanswered",
+    "question": "En el dataset de Tiroides, donde ~90% de los casos son negativos, ¿por qué la \"Accuracy\" (Exactitud) se considera una métrica engañosa?",
+    "options": [
+      {
+        "text": "a. La exactitud no puede llegar al 100% cuando hay más de dos clases.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Es computacionalmente costoso de calcular en datasets desbalanceados, haciendo que sea una métrica confusa, y necesitando promediarla con otras.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Sobreestima el rendimiento en la clase minoritaria al ponderarla demasiado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Un modelo ingenuo que prediga \"negativo\" para todos lograría ~90% de exactitud fallando en detectar cualquier caso de enfermedad .",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Debido al desequilibrio de clases, un modelo \"ingenuo\" que prediga \"negativo\" para todos los pacientes lograría un 90% de exactitud, aparentando ser excelente, pero fallaría en detectar el 100% de los casos reales de enfermedad (Recall = 0%). Esto lo hace clínicamente inútil.",
+    "rightAnswer": "A resposta correcta é:Un modelo ingenuo que prediga \"negativo\" para todos lograría ~90% de exactitud fallando en detectar cualquier caso de enfermedad .",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 63,
+    "status": "incorrect",
+    "question": "¿Qué tipo de método de aprendizaje automático son los árboles de decisión?",
+    "options": [
+      {
+        "text": "a. Método de aprendizaje supervisado profundo",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": ""
+      },
+      {
+        "text": "b. Método de aprendizaje supervisado no paramétrico",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Método de aprendizaje supervisado paramétrico",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Método de aprendizaje no supervisado no paramétrico",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "",
+    "rightAnswer": "A resposta correcta é: Método de aprendizaje supervisado no paramétrico",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 64,
+    "status": "incorrect",
+    "question": "¿Cómo maneja Random Forest (en versiones modernas de Scikit-Learn o XGBoost) los valores faltantes (NaN) de forma nativa en comparación con la Regresión Logística?",
+    "options": [
+      {
+        "text": "a. Usa K-Nearest Neighbors para estimar el valor faltante basado en filas similares.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Aprende una dirección óptima para los valores faltantes en cada división del árbol durante el entrenamiento, mientras que la Regresión Logística requiere imputación explícita.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Por defecto rellena los valores faltantes con la mediana de la columna, aunque se puede configurar para que use la media con el parámetro \"with_mean=True\".",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Eso sería imputación simple y se haría con StandarScaler, donde sí existe ese parámetro."
+      },
+      {
+        "text": "d. Ignora las filas con valores faltantes durante el entrenamiento (eliminación por lista).",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Aprende una dirección óptima (hijo izquierdo o derecho) para los valores faltantes en cada división del árbol durante el entrenamiento. Esto permite que el modelo use la información de \"dato faltante\" para discriminar, mientras que la Regresión Logística requiere imputación numérica explícita antes de entrenar.",
+    "rightAnswer": "A resposta correcta é: Aprende una dirección óptima para los valores faltantes en cada división del árbol durante el entrenamiento, mientras que la Regresión Logística requiere imputación explícita.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 65,
+    "status": "incorrect",
+    "question": "Un modelo de predicción de precios de vivienda utiliza como features: metros cuadrados, número de habitaciones, código postal y año de construcción. ¿Por qué podría ser insuficiente una regresión lineal simple para este problema?",
+    "options": [
+      {
+        "text": "a. El año de construcción debe convertirse a antigüedad porque los años no pueden usarse directamente sin escalar.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. El año como número es válido; el problema está en variables categóricas como código postal."
+      },
+      {
+        "text": "b. El número de habitaciones es demasiado discreto para una regresión que requiere variables continuas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Los precios de vivienda siempre siguen distribuciones no gaussianas que invalidan la regresión lineal",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El código postal es una variable categórica sin orden numérico natural; no tiene relación lineal con el precio y requiere encoding especial",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El código postal es categórico y no tiene relación lineal con el precio. Requiere tratamiento especial (encoding) y/o modelos no lineales.",
+    "rightAnswer": "A resposta correcta é: El código postal es una variable categórica sin orden numérico natural; no tiene relación lineal con el precio y requiere encoding especial",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 66,
+    "status": "correct",
+    "question": "¿Cómo realiza predicciones un Random Forest en tareas de regresión?",
+    "options": [
+      {
+        "text": "a. Por votación mayoritaria de los valores numéricos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Usando la predicción del árbol más profundo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Tomando el valor máximo predicho por cualquier árbol",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Promediando las predicciones de todos los árboles",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "",
+    "rightAnswer": "A resposta correcta é: Promediando las predicciones de todos los árboles",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 67,
+    "status": "correct",
+    "question": "Observas un histograma de la variable \"edad\" en un dataset médico. Casi todo el espacio del eje X está vacío , con la inmensa mayoría de las barras concentradas en el extremo izquierdo (0-100) y unas pocas observaciones dispersas hacia valores como 455, 65511, 65512. ¿Qué indica esto?",
+    "options": [
+      {
+        "text": "a. Hay outliers extremos o errores de entrada de datos que son imposibles y deben corregirse o eliminarse",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. El histograma se distorsiona por valores imposibles que indican errores de datos."
+      },
+      {
+        "text": "b. Es necesario aplicar escalado para que la distribución se vuelva normal, evitando la influencia de los outliers.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Hay que comprobar si la distribución es normal, en cuyo caso no sería necesario hacer nada.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Es necesario aplicar una transforamación logarítmica para mitigar el impacto de los valores extremos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Este patrón indica la presencia deoutliers extremoso, más probablemente,errores de entrada de datos. Edades como 455 o 65511 son imposibles para seres humanos y representan errores tipográficos o de transcripción (ej: alguien escribió \"45\" como \"455\", o hubo corrupción de datos). El histograma \"aplasta\" los datos reales en el extremo izquierdo porque el eje X debe extenderse hasta los valores erróneos. La solución requierelimpieza de datos: filtrar o corregir estos valores imposibles (ej: capping a 100 años máximo).",
+    "rightAnswer": "A resposta correcta é:Hay outliers extremos o errores de entrada de datos que son imposibles y deben corregirse o eliminarse",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 68,
+    "status": "notanswered",
+    "question": "¿Cuál es la diferencia principal entre Clasificación (aprendizaje supervisado) y Clustering (aprendizaje no supervisado)?",
+    "options": [
+      {
+        "text": "a. Clasificación requiere necesariamente más datos que Clustering para poder funcionar correctamente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. En Clasificación las etiquetas son conocidas de antemano; en Clustering se descubren los grupos.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Clustering solo funciona con datos numéricos, mientras que Clasificación puede manejar todo tipo de datos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Clasificación es más precisa que Clustering, por lo que siempre es preferible cuando sea posible utilizarla.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "EnClasificación, las clases/etiquetas estánpredefinidasy el modelo aprende a asignar nuevas instancias a esas clases conocidas. EnClustering, los gruposse descubrena partir de los datos sin etiquetas previas; el algoritmo encuentra estructura oculta.",
+    "rightAnswer": "A resposta correcta é: En Clasificación las etiquetas son conocidas de antemano; en Clustering se descubren los grupos.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 69,
+    "status": "notanswered",
+    "question": "En regresión, RMSE penaliza más los errores grandes que MAE. ¿En qué escenario tiene más sentido preferir RMSE?",
+    "options": [
+      {
+        "text": "a. Cuando quieres robustez a outliers y tratar todos los errores por igual.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Cuando necesitas una métrica no diferenciable para optimización por gradiente.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Cuando los errores grandes son especialmente indeseables y quieres penalizarlos desproporcionadamente.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Cuando hay fuga de datos y necesitas compensarla.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "RMSE eleva al cuadrado los errores: castiga fuertemente grandes desviaciones. Es útil cuando los “fallos catastróficos” son especialmente costosos.",
+    "rightAnswer": "A resposta correcta é: Cuando los errores grandes son especialmente indeseables y quieres penalizarlos desproporcionadamente.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 70,
+    "status": "incorrect",
+    "question": "Tanto clustering como association rule mining son técnicas de aprendizaje no supervisado. ¿Cuál es la diferencia fundamental entre clustering y association rule mining ?",
+    "options": [
+      {
+        "text": "a. Clustering agrupa instancias similares (ej. clientes); association rule mining descubre relaciones entre items (ej. productos comprados juntos).",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Clustering es supervisado y requiere etiquetas mientras que association rule mining es completamente no supervisado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Clustering es determinístico y siempre produce el mismo resultado mientras que association mining puede producir resultados diferentes en cada ejecución.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Clustering produce un modelo que puede aplicarse a nuevos datos mientras que association mining solo describe los datos de entrenamiento.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Ambos pueden producir modelos aplicables a nuevos datos. La diferencia es que uno agrupa instancias y el otro descubre relaciones entre items."
+      }
+    ],
+    "feedback": "Mientras queclustering agrupa instancias(como clientes) basándose en su similitud,association rule mining descubre relaciones entre items. Por ejemplo, clustering podría agrupar clientes similares, mientras que association rule mining descubriría que clientes que compran pan también tienden a comprar mantequilla (\"market basket analysis\"). Son perspectivas complementarias sobre la estructura de los datos.",
+    "rightAnswer": "A resposta correcta é:Clustering agrupa instancias similares (ej. clientes); association rule mining descubre relaciones entre items (ej. productos comprados juntos).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 71,
+    "status": "incorrect",
+    "question": "¿Cuál de los siguientes escenarios describe mejor a un modelo que sufre de Alta Varianza (Overfitting) ?",
+    "options": [
+      {
+        "text": "a. El modelo tiene error cero en el conjunto de test.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El modelo tiene un error bajo tanto en el conjunto de entrenamiento como en el de test.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El modelo tiene un error mucho más bajo en entrenamiento que en test.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. El modelo tiene un error muy bajo en el conjunto de test pero un error alto en el conjunto de entrenamiento.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Eso es inusual y suele indicar problemas de distribución de datos, no overfitting."
+      }
+    ],
+    "feedback": "El Overfitting (Alta Varianza) se caracteriza por un rendimiento excelente en el conjunto de entrenamiento (baja bias, memorización) pero un rendimiento pobre en el conjunto de test (mala generalización). El modelo ha \"aprendido\" el ruido específico del entrenamiento.",
+    "rightAnswer": "A resposta correcta é:El modelo tiene un error mucho más bajo en entrenamiento que en test.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 72,
+    "status": "correct",
+    "question": "Si disponemos de un listado de transacciones sin etiquetar (cantidad, fecha, ubicación...), ¿qué enfoque de aprendizaje automático es el más adecuado inicialmente para detectar posibles usos fraudulentos?",
+    "options": [
+      {
+        "text": "a. Algoritmos Genéticos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Aprendizaje Supervisado",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Aprendizaje No Supervisado",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Permite detectar valores atípicos (anomalías) sin necesidad de haber visto fraudes previos etiquetados."
+      },
+      {
+        "text": "d. Aprendizaje por Refuerzo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Al no tener etiquetas históricas (o ser el fraude muy raro y cambiante), se suele aplicarAprendizaje No Supervisado, específicamente técnicas de Detección de Anomalías (Anomaly Detection) para encontrar patrones que se desvíen significativamente del comportamiento normal.",
+    "rightAnswer": "A resposta correcta é: Aprendizaje No Supervisado",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 73,
+    "status": "incorrect",
+    "question": "¿Qué minimiza K-Means durante su ejecución?",
+    "options": [
+      {
+        "text": "a. El error de clasificación respecto a las etiquetas reales.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El número de clústeres creados.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. La inercia (suma de las distancias al cuadrado de cada punto a su centroide más cercano).",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. La distancia entre los diferentes centroides (separación).",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Maximiza la separación indirectamente, pero minimiza la cohesión interna."
+      }
+    ],
+    "feedback": "K-Means intenta minimizar laInercia(o suma de cuadrados dentro del clúster - WCSS). Es decir, busca minimizar la distancia cuadrada de cada punto respecto al centroide de su clúster asignado, haciendo los clústeres lo más compactos posible.",
+    "rightAnswer": "A resposta correcta é: La inercia (suma de las distancias al cuadrado de cada punto a su centroide más cercano).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 74,
+    "status": "notanswered",
+    "question": "¿Qué define fundamentalmente al Aprendizaje Supervisado ?",
+    "options": [
+      {
+        "text": "a. Un paradigma donde el dataset de entrenamiento incluye explícitamente la variable objetivo (etiqueta) para cada ejemplo.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Un modelo que se entrena a sí mismo de forma autónoma sin ninguna intervención ni dato previo.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Un tipo de aprendizaje donde se supervisa el proceso indicando recompensas o castigos tras una secuencia de acciones.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Un enfoque que busca patrones o estructuras ocultas en datos no etiquetados.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "En el aprendizaje supervisado, cada ejemplo de entrenamiento incluye tanto las features (entradas) como la etiqueta o valor objetivo (\"ground truth\"). El objetivo es aprender una función que mapee las entradas a las salidas para predecir etiquetas en datos nuevos.",
+    "rightAnswer": "A resposta correcta é: Un paradigma donde el dataset de entrenamiento incluye explícitamente la variable objetivo (etiqueta) para cada ejemplo.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 75,
+    "status": "incorrect",
+    "question": "Después de entrenar un modelo K-Means con scikit-learn, ¿qué atributos importantes contiene el objeto?",
+    "options": [
+      {
+        "text": "a. No tiene atributos; solo métodos fit() y predict() que deben llamarse cada vez",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Después de fit(), el modelo almacena labels_, cluster_centers_, inertia_ y más atributos."
+      },
+      {
+        "text": "b. labels_: etiqueta de cluster para cada punto; cluster_centers_: coordenadas de centroides; inertia_: WCSS final",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. feature_importances_: importancia de cada característica; classes_: clases predichas",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. probability_matrix_: matriz de probabilidades de pertenecer a cada cluster",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Después defit(), el modelo K-Means tiene atributos clave: (1)labels_: Array de etiquetas que asigna cada punto a un cluster (0 a K-1). (2)cluster_centers_: Coordenadas de los K centroides (matriz de forma K × n_features). (3)inertia_: WCSS final del clustering. (4)n_iter_: Número de iteraciones hasta convergencia. El métodopredict()permite asignar nuevos datos a clusters sin reentrenar.",
+    "rightAnswer": "A resposta correcta é: labels_: etiqueta de cluster para cada punto; cluster_centers_: coordenadas de centroides; inertia_: WCSS final",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 76,
+    "status": "incorrect",
+    "question": "¿Cuál es la principal desventaja práctica de utilizar la validación cruzada (k-fold Cross-Validation) en comparación con una simple división (hold-out) de entrenamiento-test?",
+    "options": [
+      {
+        "text": "a. El coste computacional se incrementa proporcionalmente al número de folds.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Requiere obligatoriamente muchos más datos que una división simple.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. De hecho, CV es ideal para datasets pequeños porque aprovecha cada observación tanto para training como para validación en algún momento."
+      },
+      {
+        "text": "c. Se pierde la posibilidad de evaluar el rendimiento final en datos no vistos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Es metodológicamente más difícil ajustar los hiperparámetros.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "La validación cruzada implica entrenar y evaluar el modelokveces (una por cada pliegue/fold). Esto multiplica el coste computacional por un factor dek, lo cual puede ser prohibitivo en modelos profundos o datasets grandes.",
+    "rightAnswer": "A resposta correcta é: El coste computacional se incrementa proporcionalmente al número de folds.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 77,
+    "status": "correct",
+    "question": "¿Cómo se puede detectar que un modelo está haciendo overfitting?",
+    "options": [
+      {
+        "text": "a. Contando el número de parámetros del modelo: más parámetros = overfitting",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Si el modelo predice siempre el mismo valor, está haciendo overfitting",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Comparando error train vs test: si error_train es mucho menor que error_test, hay overfitting",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. La gran diferencia entre rendimiento en train y test es el indicador clave."
+      },
+      {
+        "text": "d. Observando solo el error en entrenamiento: si es bajo, el modelo es bueno",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El overfitting se detecta comparando el rendimiento en train vs test:Si el error en train es bajo pero el error en test es significativamente mayor, hay overfitting. Por ejemplo, si MAE en train es 1000 pero MAE en test es 25000, el modelo memorizó los datos de entrenamiento. También se puede detectar con curvas de aprendizaje: si el error de train sigue bajando pero el de validación sube o se estanca, hay overfitting. La clave essiempre evaluar con datos no vistos.",
+    "rightAnswer": "A resposta correcta é: Comparando error train vs test: si error_train es mucho menor que error_test, hay overfitting",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 78,
+    "status": "incorrect",
+    "question": "La Regresión Lineal se define como una tarea de aprendizaje supervisado donde la salida objetivo es...",
+    "options": [
+      {
+        "text": "a. Un valor numérico continuo (ej. precio, temperatura).",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Un conjunto de parámetros ajustado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Una lista ordenada de elementos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Una distribución de probabilidad entre 0 y 1.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto (aunque la regresión logística da probabilidades, es un clasificador)."
+      }
+    ],
+    "feedback": "La distinción clave entre regresión y clasificación es el tipo de salida. Regresión predice un valor numéricocontinuo(infinitos valores posibles dentro de un rango, con orden y magnitud), mientras que clasificación predice etiquetas categóricas discretas.",
+    "rightAnswer": "A resposta correcta é: Un valor numérico continuo (ej. precio, temperatura).",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 79,
+    "status": "notanswered",
+    "question": "Se tiene un conjunto de datos médicos (edad, IMC, presión, glucosa, etc.) y un indicador numérico que señala la progresión de la diabetes un año después. ¿Qué tipo de problema de aprendizaje automático es el adecuado para predecir este indicador?",
+    "options": [
+      {
+        "text": "a. Clasificación binaria",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Aprendizaje reforzado",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Reducción de dimensionalidad.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Regresión Supervisada.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Dado que la variable objetivo (target) es un valor numérico continuo (un score de progresión), y no una categoría discreta, el problema se modela correctamente como unaRegresión.",
+    "rightAnswer": "A resposta correcta é: Regresión Supervisada.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 80,
+    "status": "notanswered",
+    "question": "¿Cuál es el objetivo principal del clustering?",
+    "options": [
+      {
+        "text": "a. Utiliza refuerzo positivo y negativo para aprender la estructura de los datos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Predice valores numéricos continuos a partir de características de entrada sin supervisión humana.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Clasifica datos en categorías predefinidas sin necesidad de entrenamiento previo.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Agrupa registros en grupos de características similares, descubriendo estructura inherente.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Clusteringes una técnica deaprendizaje no supervisadoporque opera sobre datossin etiquetas(no hay variable objetivo conocida). Su propósito esagrupar registros en grupos de características similares, llamadosclusters. Los puntos dentro de un cluster son más similares entre sí que con puntos de otros clusters. No hay \"respuesta correcta\" predefinida; el algoritmo descubre la estructura inherente en los datos.",
+    "rightAnswer": "A resposta correcta é:Agrupa registros en grupos de características similares, descubriendo estructura inherente.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 81,
+    "status": "notanswered",
+    "question": "En la estrategia Epsilon-Greedy , ¿qué ocurre cuando el agente decide \"explorar\" (con probabilidad epsilon)?",
+    "options": [
+      {
+        "text": "a. Elige una acción aleatoria para descubrir nuevas posibilidades.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. El agente se detiene para procesar lo aprendido.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. El agente reinicia el episodio.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Elige siempre la acción con el valor Q más alto.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Explorar significa elegir una acciónaleatoriaen lugar de la que el agente cree que es la mejor (según la Q-Table actual). Esto permite descubrir nuevas rutas o estrategias que podrían ser mejores que las conocidas, evitando óptimos locales.",
+    "rightAnswer": "A resposta correcta é:Elige una acción aleatoria para descubrir nuevas posibilidades.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 82,
+    "status": "notanswered",
+    "question": "Un histograma de la hormona muestra sesgo derecho extremo : la gran mayoría de valores se concentran cerca de cero, pero hay una \"cola\" larga que se extiende hasta valores de 500+. ¿Qué tratamiento podría ser apropiado para esta variable?",
+    "options": [
+      {
+        "text": "a. Eliminar los valores extremos por encima del quinto cuartil.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Quedarse con los valores dentro del IQR (la diferencia entre el primer y el quinto cuartil) para evitar outliers.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Transformación logarítmica para comprimir valores altos y hacer la distribución más simétrica",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Aplicar estandarización (StandardScaler) que automáticamente corrige el sesgo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Una distribución consesgo derecho extremo(la mayoría de valores cerca de cero con cola larga hacia valores altos) típicamente se beneficia de unatransformación logarítmica. El logaritmo \"comprime\" los valores grandes y \"expande\" los pequeños, estabilizando la varianza y haciendo la distribución más simétrica. Esto es especialmente importante para modelos lineales que asumen normalidad o varianza constante. Sin embargo, hay que tener cuidado con valores cero (log(0) no está definido; se puede usar log(x+1)).",
+    "rightAnswer": "A resposta correcta é:Transformación logarítmica para comprimir valores altos y hacer la distribución más simétrica",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 83,
+    "status": "incorrect",
+    "question": "¿Cuál es la principal limitación de los árboles de decisión individuales que Random Forest busca superar?",
+    "options": [
+      {
+        "text": "a. El sobreajuste (overfitting) y la alta varianza",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La incapacidad para manejar variables categóricas",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": ""
+      },
+      {
+        "text": "c. El alto costo computacional durante el entrenamiento",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. La lentitud en el tiempo de predicción",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "",
+    "rightAnswer": "A resposta correcta é: El sobreajuste (overfitting) y la alta varianza",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 84,
+    "status": "notanswered",
+    "question": "¿En qué consiste el muestreo estratificado (stratified sampling) al dividir un dataset?",
+    "options": [
+      {
+        "text": "a. Garantizar que todas las clases están balanceadas.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Garantizar que la proporción de ejemplos de cada estrato se mantenga constante en los conjuntos de entrenamiento y test.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Dividir el dataset garantizando aleatoriedad para que la distribución del muestreo sea la misma que la de la población.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Dividir los datos cronológicamente para respetar la serie temporal.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El muestreo estratificado divide la población en subgrupos homogéneos (estratos) y toma muestras de cada uno para asegurar que el conjunto final (training o test) sea representativo de la población global, manteniendo las proporciones originales de las clases (especialmente importante si están desbalanceadas).",
+    "rightAnswer": "A resposta correcta é:Garantizar que la proporción de ejemplos de cada estrato se mantenga constante en los conjuntos de entrenamiento y test.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 85,
+    "status": "correct",
+    "question": "El learning rate (α) es un hiperparámetro crucial en Q-Learning. ¿Cuál es el efecto del learning rate en el proceso de aprendizaje?",
+    "options": [
+      {
+        "text": "a. Controla la probabilidad de exploración; α alto significa más exploración aleatoria y menos explotación del conocimiento.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Define el número de episodios necesarios para convergencia; α más alto requiere menos episodios.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Determina cuántos pasos hacia el futuro se consideran para calcular la recompensa acumulada.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Controla el peso de nueva información vs conocimiento existente; α alto = aprendizaje rápido pero inestable; α bajo = aprendizaje lento pero estable.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. El learning rate balancea entre adaptarse rápidamente a nueva información y mantener estabilidad con lo ya aprendido."
+      }
+    ],
+    "feedback": "Ellearning rate (α)controla cuánto peso damos a la nueva información vs. el conocimiento existente. Está típicamente en el rango [0, 1].α alto(cercano a 1): aprendizaje rápido pero inestable, puede olvidar lo aprendido.α bajo(cercano a 0): aprendizaje lento pero estable, requiere más exploraciones. Valores típicos: 0.1-0.5. Un α=1 reemplaza completamente el valor antiguo; α=0 no aprende nada nuevo.",
+    "rightAnswer": "A resposta correcta é:Controla el peso de nueva información vs conocimiento existente; α alto = aprendizaje rápido pero inestable; α bajo = aprendizaje lento pero estable.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 86,
+    "status": "correct",
+    "question": "¿En qué consiste la técnica de imputación durante el preprocesamiento de datos?",
+    "options": [
+      {
+        "text": "a. Rellenar los valores faltantes con un valor estimado.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Permite conservar el resto de información de la fila."
+      },
+      {
+        "text": "b. Utilizar modelos que permiten el tratamiento de valores faltantes al asignarle un valor especial, como los árboles de decisión.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Cambiar todos los valores faltantes siempre por ceros después de haber escalado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Identificar los valores nulos o desconocidos asignando NaN para que los arrays de numPy puedan procesarlos.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "La imputación es el proceso de rellenar los valores faltantes (missing values/NaNs) con estimaciones razonables (como la media, mediana, moda o un valor constante) para evitar errores en los algoritmos que no admiten datos incompletos.",
+    "rightAnswer": "A resposta correcta é:Rellenar los valores faltantes con un valor estimado.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 87,
+    "status": "correct",
+    "question": "En un sistema de detección de fraude bancario, ¿cuál es la consecuencia práctica negativa de priorizar exageradamente la exhaustividad (high recall)?",
+    "options": [
+      {
+        "text": "a. Que se bloquearán muchas transacciones legítimas por error (Falsos Positivos), causando molestias a los clientes.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto."
+      },
+      {
+        "text": "b. Que el sistema será incapaz de detectar fraudes nuevos en producción.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Que se escaparán muchos fraudes reales, causando pérdidas económicas directas (Falsos Negativos).",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Que se requerirán menos datos para entrenar.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Priorizar el Recall significa capturar todos los fraudes posibles. Al bajar el umbral de decisión para lograr esto, muchas transacciones legítimas se clasificarán incorrectamente como fraudulentas (Falsos Positivos). Esto causamolestias a los clientes(bloqueo de tarjetas) y costes operativos de revisión manual.",
+    "rightAnswer": "A resposta correcta é: Que se bloquearán muchas transacciones legítimas por error (Falsos Positivos), causando molestias a los clientes.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 88,
+    "status": "correct",
+    "question": "¿Qué característica fundamental distingue a los arrays de NumPy de las listas estándar de Python?",
+    "options": [
+      {
+        "text": "a. Son más lentos pero más robustos que las listas al estar programados en C.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Pueden contener diferentes tipos de datos mezclados en el mismo array.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Siempre tienen una estructura de dos dimensiones sin forzar mientras que las listas requieren ser anidadas, lo que limita el control de la estructura.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Son homogéneos (mismo tipo de dato) y más eficientes en memoria y velocidad.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. La homogeneidad es clave para el rendimiento en C."
+      }
+    ],
+    "feedback": "Los arrays de NumPy sonhomogéneos(todos los elementos deben ser del mismo tipo de dato) y tienen un tamaño fijo en memoria tras su creación. Esto permite optimizaciones masivas de velocidad (vectorización) y uso de memoria en comparación con las listas de Python, que son heterogéneas y almacenan referencias a objetos.",
+    "rightAnswer": "A resposta correcta é: Son homogéneos (mismo tipo de dato) y más eficientes en memoria y velocidad.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 89,
+    "status": "notanswered",
+    "question": "¿Cuándo ocurre el Sesgo de Muestreo (Sampling Bias) en la recolección de datos?",
+    "options": [
+      {
+        "text": "a. Cuando el algoritmo de aprendizaje infravalora las clases minoritarias.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Cuando la muestra recolectada no es representativa de la población objetivo.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Cuando los datos no están normalizados.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Cuando existen valores nulos en el dataset.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Ocurre cuando la muestra recolectada no representa fielmente la distribución real de la población objetivo, generalmente porque ciertos grupos tienen menor probabilidad de ser seleccionados. Esto invalida las predicciones en el mundo real.",
+    "rightAnswer": "A resposta correcta é:Cuando la muestra recolectada no es representativa de la población objetivo.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 90,
+    "status": "incorrect",
+    "question": "En el contexto del algoritmo Minimax para juegos de suma cero como el Tres en Raya (Tic-Tac-Toe), ¿qué hace que el algoritmo sea \"pesimista\" sobre la estrategia del oponente?",
+    "options": [
+      {
+        "text": "a. Asume que el oponente intenta maximizar la puntuación del jugador.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Asume que el oponente tiene información oculta.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Asume que el oponente juega de manera óptima para minimizar la puntuación del jugado.",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Asume que el oponente juega aleatoriamente.",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Eso simplificaría el problema (oponente débil), pero Minimax es cauteloso."
+      }
+    ],
+    "feedback": "Minimax asume un escenario del \"peor caso\": supone que el oponente es racional y siempre ejecutará el movimiento óptimo posible para minimizar tu puntuación (que es lo mismo que maximizar la suya en un juego de suma cero). Si el oponente juega mal, Minimax sigue funcionando, pero su estrategia base es defenderse contra un oponente perfecto.",
+    "rightAnswer": "A resposta correcta é:Asume que el oponente juega de manera óptima para minimizar la puntuación del jugado.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 91,
+    "status": "correct",
+    "question": "En el contexto de Q-Learning Tabular para Tres en Raya, ¿qué es exactamente lo que el agente \"aprende\"?",
+    "options": [
+      {
+        "text": "a. Las reglas explícitas del juego (3 en raya es victoria).",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. La sintaxis de Python para el juego, aunque esto no refleja correctamente el comportamiento esperado.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. Una tabla de valores que representan la recompensa futura esperada por tomar una acción específica en un estado de tablero específico.",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Función Q(s,a)."
+      },
+      {
+        "text": "d. Un árbol de decisión similar a Minimax.",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "El agente aprende unaQ-Table(tabla de calidad), que es un mapa que asocia cada par posible de (Estado, Acción) con un valor numérico. Este valor representa la recompensa futura acumulada esperada (utilidad) de tomar esa acción en ese estado específico.",
+    "rightAnswer": "A resposta correcta é: Una tabla de valores que representan la recompensa futura esperada por tomar una acción específica en un estado de tablero específico.",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 92,
+    "status": "correct",
+    "question": "¿Cuál de estos algoritmos tiene un coste computacional bajo en entrenamiento pero potencialmente alto en predicción ?",
+    "options": [
+      {
+        "text": "a. K-Means",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. SVM (Support Vector Machines)",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "c. KNN (K-Nearest Neighbors)",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Al no aprender parámetros, traslada toda la carga computacional al momento de inferencia."
+      },
+      {
+        "text": "d. Árboles de Decisión",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "KNN es un algoritmo \"perezoso\" (lazy). No construye un modelo explícito durante el entrenamiento (coste casi nulo), pero en predicción debe calcular distancias contra todos los puntos almacenados (coste alto).",
+    "rightAnswer": "A resposta correcta é: KNN (K-Nearest Neighbors)",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 93,
+    "status": "correct",
+    "question": "Una aerolínea tiene datos de vuelos con horas de salida y llegada (programadas y reales) y quiere predecir si un vuelo llegará con retraso. No tienen un campo explícito de \"retrasado sí/no\" . ¿Cuál es el enfoque metodológico correcto?",
+    "options": [
+      {
+        "text": "a. Aprendizaje no supervisado con detección de anomalías, ya que los retrasos son eventos anómalos en el tráfico aéreo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Crear una variable sintética de retraso (diferencia entre hora real y programada), preferiblemente modelándola como regresión para predecir minutos de retraso",
+        "correct": true,
+        "selected": true,
+        "selected_wrong": false,
+        "feedback": "Correcto. Derivamos la etiqueta de datos existentes; regresión preserva más información que clasificación binaria."
+      },
+      {
+        "text": "c. Clasificación binaria directa usando la hora de llegada como variable objetivo en lugar de crear una etiqueta derivada",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Usar clustering para agrupar vuelos con patrones temporales similares e identificar los grupos que corresponden a retrasos",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "Aunque no hay etiqueta explícita, podemos crearla como variable sintética comparando hora real vs programada. Mejor aún: predecir minutos de retraso (regresión) y umbralizar después.",
+    "rightAnswer": "A resposta correcta é: Crear una variable sintética de retraso (diferencia entre hora real y programada), preferiblemente modelándola como regresión para predecir minutos de retraso",
+    "hasCorrectMarked": true
+  },
+  {
+    "num": 94,
+    "status": "incorrect",
+    "question": "En scikit-learn, el parámetro n_init de K-Means especifica cuántas veces se ejecutará el algoritmo. ¿Por qué es útil este parámetro?",
+    "options": [
+      {
+        "text": "a. Ejecuta K-Means n_init veces con diferentes inicializaciones; devuelve el mejor resultado para evitar óptimos locales",
+        "correct": true,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "b. Limita el número máximo de iteraciones por ejecución del algoritmo",
+        "correct": false,
+        "selected": true,
+        "selected_wrong": true,
+        "feedback": "Incorrecto. Ese es max_iter, no n_init. n_init es número de ejecuciones completas."
+      },
+      {
+        "text": "c. Define el número de clusters a probar en búsqueda del K óptimo",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      },
+      {
+        "text": "d. Especifica el número de muestras a usar para estimar los centroides iniciales",
+        "correct": false,
+        "selected": false,
+        "selected_wrong": false,
+        "feedback": ""
+      }
+    ],
+    "feedback": "n_initespecifica el número de veces que se ejecuta K-Means condiferentes centroides iniciales. El resultado final es elmejor de todas las ejecucionesen términos de inercia. Esto es útil porque K-Means puede encontrar óptimos locales dependiendo de la inicialización; ejecutar múltiples veces aumenta la probabilidad de encontrar un buen clustering. El valor por defecto era 10, ahora 'auto' ajusta automáticamente. Más ejecuciones = mejor resultado pero mayor tiempo de cómputo.",
+    "rightAnswer": "A resposta correcta é: Ejecuta K-Means n_init veces con diferentes inicializaciones; devuelve el mejor resultado para evitar óptimos locales",
+    "hasCorrectMarked": true
+  }
+]
